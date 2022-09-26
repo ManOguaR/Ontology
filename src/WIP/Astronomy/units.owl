@@ -1,0 +1,491 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#"
+     xml:base="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:units="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#">
+    <owl:Ontology rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl">
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ed Shaya, University of Maryland</dc:creator>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology covers classes and properties dealing with physical units. </dc:description>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">units.owl</dc:title>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.2</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#hasInverseOfSpecialNumber -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#hasInverseOfSpecialNumber">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unit"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#specialNumber"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#hasInverseOfUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#hasInverseOfUnit">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unit"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unit"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#hasSpecialNumber -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#hasSpecialNumber">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unit"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#specialNumber"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#hasUnit -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#hasUnit">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unit"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unit"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unitless"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#divisor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#divisor">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#factor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#factor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#hasExponent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#hasExponent">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#powerOf"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#isNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#isNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#specialNumber"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#symbol -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#symbol">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#type">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unitless"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#numeric -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#numeric"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#CgsUnit -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#CgsUnit">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#MksUnit -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#MksUnit">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#SiUnit -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#SiUnit">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#baseUnit -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#baseUnit">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unit"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">These form the basis set of units.owl from which all other units are derived.  The fundamental SI units would be a good set of baseUnits.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#mathConstant -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#mathConstant">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#specialNumber"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#powerOf -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#powerOf">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unit"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This takes a unitType object and raises it to some power.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#prefix -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#prefix">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#specialNumber"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The standard prefixes on units.owl (kilo, deci, centi, etc)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#specialNumber -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#specialNumber">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#numeric"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unit"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The usual number type thing</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unit -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unit">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unit-like Things built from baseUnits and other derived Units.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unitless -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unitless">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unit"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#Giga -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#Giga">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#prefix"/>
+        <isNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E9</isNumber>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#Hecto -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#Hecto">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#prefix"/>
+        <isNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.0</isNumber>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#Kilo -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#Kilo">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#prefix"/>
+        <isNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1000.0</isNumber>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#Mega -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#Mega">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#prefix"/>
+        <isNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1000000.0</isNumber>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#Tera -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#Tera">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#prefix"/>
+        <isNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E12</isNumber>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#ampere -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#ampere">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#baseUnit"/>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#candella -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#candella">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#baseUnit"/>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cd</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#centi -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#centi">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#prefix"/>
+        <isNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.01</isNumber>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#gram -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#gram">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#baseUnit"/>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">g</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#kelvin -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#kelvin">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#baseUnit"/>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#meter -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#meter">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#baseUnit"/>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#micro -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#micro">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#prefix"/>
+        <isNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-6</isNumber>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mu</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#milli -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#milli">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#prefix"/>
+        <isNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.001</isNumber>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#mole -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#mole">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#baseUnit"/>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mol</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#nano -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#nano">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#prefix"/>
+        <isNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0E-9</isNumber>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">n</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#radian -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#radian">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#baseUnit"/>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rad</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#second -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#second">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#baseUnit"/>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">s</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unitlessFraction -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unitlessFraction">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unitless"/>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">---</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unitlessLog -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unitlessLog">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unitless"/>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">log</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unitlessNaturalLog -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unitlessNaturalLog">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unitless"/>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ln</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unitlessNumber -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unitlessNumber">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unitless"/>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">n</symbol>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unitlessNumberOf -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unitlessNumberOf">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unitless"/>
+        <symbol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">#</symbol>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

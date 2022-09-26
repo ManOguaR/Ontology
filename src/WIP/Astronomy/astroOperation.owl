@@ -1,0 +1,1098 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#"
+     xml:base="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:IVOAO="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#"
+     xmlns:operation="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#"
+     xmlns:skos-core="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#">
+    <owl:Ontology rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl">
+        <owl:imports rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#hasPhysicalMeasurement -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#hasPhysicalMeasurement"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#TullyFisher -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#TullyFisher">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#implements"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#TullyFisherRelation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputThing1"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#spiralGalaxy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputThing2"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#spiralGalaxy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#ouputThing1"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#spiralGalaxy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#TullyFisherRelation -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#TullyFisherRelation">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#correlation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#relates"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithInclination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#relates"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithLuminosity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#relates"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithRotationVelocity.Maximum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#hasProgram"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#TullyFisher"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#VmaxToAbsMag -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#VmaxToAbsMag">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#TullyFisher"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputQuantity1"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#W20"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputQuantity2"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#inclination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputQuantity1"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitude"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#W20ToAbsoluteB -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#W20ToAbsoluteB">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#VmaxToAbsMag"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputQuantity1"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInB"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#urn"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urn:archive.astro.umd.edu/java/W20ToAbsoluteB.java</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#W20ToAbsoluteH -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#W20ToAbsoluteH">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#VmaxToAbsMag"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputQuantity1"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInH"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#urn"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urn:archive.astro.umd.edu/java/W20ToAbsoluteH.java</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#W20ToAbsoluteI -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#W20ToAbsoluteI">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#VmaxToAbsMag"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputQuantity1"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#urn"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urn:archive.astro.umd.edu/java/W20ToAbsoluteI.java</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#W20ToAbsoluteJ -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#W20ToAbsoluteJ">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#VmaxToAbsMag"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputQuantity1"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInJ"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#urn"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urn:archive.astro.umd.edu/java/W20ToAbsoluteJ.java</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#W20ToAbsoluteK -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#W20ToAbsoluteK">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#VmaxToAbsMag"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputQuantity1"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInK"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#urn"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urn:archive.astro.umd.edu/java/W20ToAbsoluteK.java</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#W20ToAbsoluteR -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#W20ToAbsoluteR">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#VmaxToAbsMag"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputQuantity1"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInR"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#urn"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urn:archive.astro.umd.edu/java/W20ToAbsoluteR.java</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#W20ToAbsoluteV -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#W20ToAbsoluteV">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#VmaxToAbsMag"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputQuantity1"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInV"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#urn"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urn:archive.astro.umd.edu/java/W20ToAbsoluteV.java</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absMagToVmax -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absMagToVmax">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#TullyFisher"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputQuantity1"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitude"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputQuantity2"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#inclination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputQuantity1"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#W20"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absoluteBToW20 -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absoluteBToW20">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absMagToVmax"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputQuantity1"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInB"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#urn"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urn:archive.astro.umd.edu/java/absoluteBToW20.java</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absoluteHToW20 -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absoluteHToW20">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absMagToVmax"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputQuantity1"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInH"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#urn"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urn:archive.astro.umd.edu/java/absoluteHToW20.java</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absoluteIToW20 -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absoluteIToW20">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absMagToVmax"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputQuantity1"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#urn"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urn:archive.astro.umd.edu/java/absoluteIToW20.java</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absoluteJToW20 -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absoluteJToW20">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absMagToVmax"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputQuantity1"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInJ"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#urn"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urn:archive.astro.umd.edu/java/absoluteJToW20.java</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absoluteKToW20 -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absoluteKToW20">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absMagToVmax"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputQuantity1"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInK"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#urn"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urn:archive.astro.umd.edu/java/absoluteKToW20.java</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absoluteRToW20 -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absoluteRToW20">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absMagToVmax"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputQuantity1"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInR"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#urn"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urn:archive.astro.umd.edu/java/absoluteRToW20.java</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absoluteVToW20 -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absoluteVToW20">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#absMagToVmax"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputQuantity1"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInV"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#urn"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urn:archive.astro.umd.edu/java/absoluteVToW20.java</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#axialRatio2InclinationCode -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#axialRatio2InclinationCode">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#inclination_AxialRatioCode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#input"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#galaxyWithAxialRatio"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#output"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#galaxyWithInclination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#distanceModulusDef -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#distanceModulusDef">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MSubtraction"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#initialM"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#apparentMagnitude"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputM"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#distanceModulus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#reduceByM"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitude"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#distanceModulusToDistanceCode -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#distanceModulusToDistanceCode">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#program"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#input"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#distanceModulus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#output"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#distance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#distanceToDistanceModulusCode -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#distanceToDistanceModulusCode">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#program"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#input"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#distance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#output"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#distanceModulus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#implements"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#distance_DistanceModulus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#distanceToParallaxCode -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#distanceToParallaxCode">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#program"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#input"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#distance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#output"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#parallax"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#implements"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#distance_Parallax"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#distance_DistanceModulus -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#distance_DistanceModulus">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#exactRelationship"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#relates"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#distanceModulus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#relates"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#distance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#hasProgram"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#distanceModulusToDistanceCode"/>
+                            <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#distanceToDistanceModulusCode"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#distance_Parallax -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#distance_Parallax">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#exactRelationship"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#hasProgram"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#distanceToParallaxCode"/>
+                            <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#parallaxToDistanceCode"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#galaxyWithAxialRatio -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#galaxyWithAxialRatio">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#galaxy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#hasGalaxyMeasurement"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#galaxyAxialRatio"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#galaxyWithInclination -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#galaxyWithInclination">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#galaxy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#hasGalaxyMeasurement"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#inclination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#inclination2AxialRatioCode -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#inclination2AxialRatioCode">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#inclination_AxialRatioCode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#input"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#galaxyWithInclination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#output"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#galaxyWithAxialRatio"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#inclination_AxialRatio -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#inclination_AxialRatio">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#relationship"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#relates"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#galaxyAxialRatio"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#relates"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#galaxyAxialRatioIntrinsic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#relates"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#inclination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#inclination_AxialRatioCode -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#inclination_AxialRatioCode">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#compiledProgram"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#parallaxToDistanceCode -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#parallaxToDistanceCode">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#program"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#implements"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#distance_Parallax"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#input"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#parallax"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#output"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#distance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#rotationalVelocity.Maximum -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#rotationalVelocity.Maximum">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#rotationalVelocity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithAbsoluteB -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithAbsoluteB">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithLuminosity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#hasPhotometry"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInB"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithAbsoluteH -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithAbsoluteH">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithLuminosity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#hasPhotometry"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInH"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithAbsoluteI -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithAbsoluteI">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithLuminosity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#hasPhotometry"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithAbsoluteJ -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithAbsoluteJ">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithLuminosity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#hasPhotometry"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInJ"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithAbsoluteK -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithAbsoluteK">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithLuminosity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#hasPhotometry"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInK"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithAbsoluteR -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithAbsoluteR">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithLuminosity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#hasPhotometry"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInR"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithAbsoluteU -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithAbsoluteU">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithLuminosity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#hasPhotometry"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInU"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithAbsoluteV -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithAbsoluteV">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithLuminosity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#hasPhotometry"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInV"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithInclination -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithInclination">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#spiralGalaxy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#hasGalaxyMeasurement"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#inclination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithLuminosity -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithLuminosity">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#spiralGalaxy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#hasPhotometry"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#luminosity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithRotationVelocity.Maximum -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithRotationVelocity.Maximum">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#spiralGalaxy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#hasPhysicalMeasurement"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#rotationalVelocity.Maximum"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithW20 -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#spiralGalaxyWithW20">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#spiralGalaxy"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#hasGalaxyMeasurement"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#W20"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#t_AxialRatioIntrinsic -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#t_AxialRatioIntrinsic">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#relationship"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#relates"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#deVaucouleursType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#relates"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#galaxyAxialRatioIntrinsic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInV -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#absoluteMagnitudeInV"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#distanceModulus -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#distanceModulus">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#hasRelationship"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#distanceModulusDef"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#hasRelationship"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#distanceModulusToDistanceCode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MSubtraction -->
+
+    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MSubtraction">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#hasProgram"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MSubtract"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#program -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#program"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#distance -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#distance"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#java -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#java"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#Ed_Shaya -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#Ed_Shaya">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#author"/>
+        <IVOAO:created rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#VmaxToAbsICode_1"/>
+        <IVOAO:hasAddress rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#Shaya_Address"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#Fisher -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#Fisher">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#inventor"/>
+        <IVOAO:invented rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#VmaxToAbsICode_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#R.B._Tully -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#R.B._Tully">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#inventor"/>
+        <IVOAO:hasAddress rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#Tully_Address"/>
+        <IVOAO:invented rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#VmaxToAbsICode_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#Shaya_Address -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#Shaya_Address">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#address"/>
+        <IVOAO:city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">College Park</IVOAO:city>
+        <IVOAO:country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</IVOAO:country>
+        <IVOAO:institutionName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></IVOAO:institutionName>
+        <IVOAO:state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MD</IVOAO:state>
+        <IVOAO:streetAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></IVOAO:streetAddress>
+        <IVOAO:zipCode rdf:datatype="http://www.w3.org/2001/XMLSchema#int">20742</IVOAO:zipCode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#Tully_Address -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#Tully_Address">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#address"/>
+        <IVOAO:city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Honolulu</IVOAO:city>
+        <IVOAO:country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</IVOAO:country>
+        <IVOAO:institutionName rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></IVOAO:institutionName>
+        <IVOAO:state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HI</IVOAO:state>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#URL_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#URL_1">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#Url"/>
+        <IVOAO:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">localhost://home/user/bin/viper/parallaxToDistanceCode_1.exe</IVOAO:hasValue>
+        <IVOAO:text rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></IVOAO:text>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#URL_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#URL_4">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#Url"/>
+        <IVOAO:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></IVOAO:hasValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#VmaxToAbsICode_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#VmaxToAbsICode_1">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#VmaxToAbsMag"/>
+        <IVOAO:createdBy rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#Ed_Shaya"/>
+        <IVOAO:inventedBy rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#Fisher"/>
+        <IVOAO:inventedBy rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#R.B._Tully"/>
+        <operation:hasFileAt rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#URL_4"/>
+        <operation:isInLanguage rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#java"/>
+        <operation:isVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0</operation:isVersion>
+        <operation:urn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urn:archive.astro.umd.edu/java/VmaxToAbsI_1</operation:urn>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#parallaxToDistanceCode_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#parallaxToDistanceCode_1">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#parallaxToDistanceCode"/>
+        <operation:compiledOn rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#unix"/>
+        <operation:hasFileAt rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#URL_1"/>
+        <operation:isInLanguage rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#java"/>
+        <operation:isVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0</operation:isVersion>
+        <operation:urn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urn:archive.astro.umd.edu/java/parallaxToDistanceCode_1</operation:urn>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#unix -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astroOperation.owl#unix">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operatingSystem"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

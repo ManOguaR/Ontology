@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1664133888799" name="http://data.travellerrpg.com/argushiigi/rpg/" uri="agurpollas/argushiigi-rpg.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1664133888799" name="http://data.travellerrpg.com/ontology/argushiigi" uri="agurpollas/argushiigi.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1664133888799" name="http://data.travellerrpg.com/ontology/argushiigi-t5" uri="agurpollas/argushiigi-t5.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1664133888799" name="http://data.travellerrpg.com/ontology/rpg" uri="agurpollas/rpg.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1664133888799" name="http://data.travellerrpg.com/ontology/t5" uri="agurpollas/t5.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1664133888799" name="http://data.travellerrpg.com/ontology/t5/characters" uri="agurpollas/t5-characters.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1664133888799" name="http://data.travellerrpg.com/ontology/t5/worlds" uri="agurpollas/t5-worlds.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1664133888799" name="http://data.travellerrpg.com/setting/traveller" uri="agurpollas/traveller-universe.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1664133888799" name="http://data.xeralabs.net/ontology/rpg" uri="rpg.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1664133888799" name="http://data.xeralabs.net/ontology/t5" uri="t5.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1664133888799" name="http://www.w3.org/2004/02/skos/core" uri="skos.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1664133888799" name="shadowed:http://data.travellerrpg.com/argushiigi/rpg/" uri="temp/argushiigi-rpg.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1664133888799" name="shadowed:http://data.travellerrpg.com/ontology/argushiigi" uri="temp/argushiigi.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1664133888799" name="shadowed:http://data.travellerrpg.com/ontology/rpg" uri="temp/rpg.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1664133888799" name="shadowed:http://www.w3.org/2004/02/skos/core" uri="temp/skos.owl"/>
+    </group>
+</catalog>

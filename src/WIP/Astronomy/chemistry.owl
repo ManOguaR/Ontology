@@ -1,0 +1,3009 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#"
+     xml:base="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:operation="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#"
+     xmlns:skos-core="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#">
+    <owl:Ontology rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl">
+        <owl:imports rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl"/>
+        <owl:imports rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ed Shaya</dc:creator>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology covers classes and properties in chemistry that are commonly used by astronomers. It includes terms from the IVOA Thesaurus plus terms from the UMD astronomical ontology</dc:description>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemistry.owl</dc:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ofSubstance -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ofSubstance">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#abundance"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalSubstance"/>
+        <skos-core:definition>Usage: abundance (Measurement) ofSubstance substance (like chlorine) </skos-core:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chirality -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chirality">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecule"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos-core:definition>The term chiral is used to describe an object that is non-superimposable on its mirror image.  Usually chirality of isomers are designated left-handed or right-handed.  Other designations are R/S (for configurations), +/- and d/l (for optical activity). or D/L</skos-core:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ABand -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ABand">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#FraunhoferLine"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecularBand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#AvogadroNumber -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#AvogadroNumber">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#physicoChemicalConstant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BBand -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BBand">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#FraunhoferLine"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecularBand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BalmerContinuum -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BalmerContinuum">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogenSpectrum"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Balmer continuum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BalmerJump -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BalmerJump">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#absorptionEdge"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BalmerLimit -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BalmerLimit">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BalmerSeries"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Balmer limit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BalmerLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BalmerLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogenLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BalmerSeries -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BalmerSeries">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogenSpectralFeature"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Balmer line</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Balmer series</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BrAlpha -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BrAlpha">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BrackettLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BrackettLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BrackettLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogenLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BrackettSeries -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BrackettSeries">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogenSpectrum"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#infraredRadiation"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brackett series</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#C2Band -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#C2Band">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecularBand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#CaHLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#CaHLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HKLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#CaIiEmissionLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#CaIiEmissionLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#calciumLine"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#emissionLine"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#metalLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ca II emission line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#CaKLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#CaKLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HKLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#Cs -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#Cs">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbonCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrocarbon"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CS</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#D1Line -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#D1Line">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#DLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#D2Line -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#D2Line">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#DLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#DLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#DLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ELine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ELine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#FraunhoferLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#FraunhoferLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#FraunhoferLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fraunhofer line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#GBand -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#GBand">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#FraunhoferLine"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecularBand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HAlpha -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HAlpha">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BalmerLine"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#resonanceLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H alpha</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HAndKLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HAndKLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#calciumLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H and K line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HBeta -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HBeta">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BalmerLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H beta</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HDelta -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HDelta">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BalmerLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H delta</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HEpsilon -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HEpsilon">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BalmerLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H epsilon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HGamma -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HGamma">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#BalmerLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H gamma</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HIi -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HIi">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogen"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ionizedGas"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ionized hydrogen</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H II</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HKLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HKLine"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#FraunhoferLine"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HAndKLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HeI -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HeI">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#helium"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#neutralGas"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">He I</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HeIi -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HeIi">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#helium"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">He II</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HeIii -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HeIii">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#helium"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">He III</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HeiiLymanAlpha -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HeiiLymanAlpha">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#resonanceLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HeliumDiscontinuity -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#HeliumDiscontinuity">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#absorptionEdge"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#KEdge -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#KEdge">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#absorptionEdge"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#KIDoublet -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#KIDoublet">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#absorptionLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#LoschmidtConstant -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#LoschmidtConstant">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#physicoChemicalConstant"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is the number of molecules in a cubic metre of an ideal gas at s.t.p. It is equal to the Avogadro constant divided by the molar volume.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#LymanAlpha -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#LymanAlpha">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#LymanLine"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#resonanceLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lyman alpha</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#LymanBeta -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#LymanBeta">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#LymanLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lyman beta</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#LymanContinuum -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#LymanContinuum">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogenSpectrum"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lyman continuum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#LymanLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#LymanLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogenLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#LymanSeries -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#LymanSeries">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogenSpectrum"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lyman series</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#MeinelBand -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#MeinelBand">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecularBand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#MullikenBand -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#MullikenBand">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecularBand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#OILine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#OILine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#forbiddenLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#OIiLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#OIiLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#forbiddenLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#OIiiLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#OIiiLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#forbiddenLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#OIvLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#OIvLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#forbiddenLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#OVLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#OVLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#forbiddenLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#OViLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#OViLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#forbiddenLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#OhLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#OhLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OH line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#PBranch -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#PBranch">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#setOfMolecularLines"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A set of lines in the spectra of molecules corresponding to unit increases in rotational energy.</skos-core:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P-branch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#PaAlpha -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#PaAlpha">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#PaschenLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#PaschenLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#PaschenLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogenLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#PaschenSeries -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#PaschenSeries">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogenSpectrum"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paschen line</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paschen series</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#PfundSeries -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#PfundSeries">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogenSpectrum"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#infraredRadiation"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pfund series</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#PhillipsBand -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#PhillipsBand">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#infraredRadiation"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecularBand"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecularSpectrum"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phillips band</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#PiAlpha -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#PiAlpha">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#PickeringLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#PiBeta -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#PiBeta">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#PickeringLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#PickeringLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#PickeringLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#QBranch -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#QBranch">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#setOfMolecularLines"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A set of lines in the spectra of molecules corresponding to unit increases in vibrational energy.</skos-core:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Q-branch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#RBranch -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#RBranch">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#setOfMolecularLines"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#RamanEffect -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#RamanEffect">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raman effect</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#RamanSpectroscopy -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#RamanSpectroscopy">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/instruments.owl#spectroscopy"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raman spectroscopy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#RamanSpectrum -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#RamanSpectrum">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#spectrum"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raman spectrum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#SwanBand -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#SwanBand">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#C2Band"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#WernerLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#WernerLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecularBand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#XRayLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#XRayLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#emissionLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X-ray line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#abnormalSpectrum -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#abnormalSpectrum">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#spectrum"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abnormal spectrum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#absorptionEdge -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#absorptionEdge">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#absorptionLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#absorptionLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">absorption line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#absorptionSpectrum -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#absorptionSpectrum">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineSpectrum"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">absorption spectrum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#abundance -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#abundance">
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemical abundance</skos-core:altLabel>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">element abundance</skos-core:altLabel>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stellar abundance</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abundance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#abundanceRatio -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#abundanceRatio">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abundance ratio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#actinium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#actinium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ac</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">actinium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#aluminum -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#aluminum">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Al</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aluminum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#americium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#americium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Am</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">americium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ammonia -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ammonia">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecule"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ammonia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#antimony -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#antimony">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sb</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antimony</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#argon -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#argon">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ar</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">argon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#arsenic -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#arsenic">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">As</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">arsenic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#astatine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#astatine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">At</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">astatine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#atom -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#atom">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#atomicSpectrum -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#atomicSpectrum">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#spectrum"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atomic spectrum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#bLines -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#bLines">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#absorptionLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#bandHead -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#bandHead">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#setOfMolecularLines"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#barium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#barium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ba</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">barium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#berkelium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#berkelium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bk</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">berkelium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#beryllium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#beryllium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Be</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">beryllium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#bismuth -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#bismuth">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bi</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bismuth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#bohrium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#bohrium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bh</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bohrium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#boron -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#boron">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">boron</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#bromine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#bromine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Br</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bromine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#cadmium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#cadmium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cd</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cadmium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#caesium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#caesium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cs</skos-core:altLabel>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cesium</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">caesium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#calcium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#calcium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ca</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">calcium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#calciumLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#calciumLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#metalLine"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">calcium line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#californium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#californium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cf</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">californium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbon -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbon">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carbon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbonCompound -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbonCompound">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecule"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carbon compound</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbonDioxide -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbonDioxide">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#gas"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbonCompound"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CO2</skos-core:altLabel>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CO_2</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carbon dioxide</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbonDisulfide -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbonDisulfide">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbonCompound"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carbon disulfide</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbonLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbonLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#metalLine"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carbon line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbonMonosulfide -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbonMonosulfide">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbonCompound"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CS</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carbon monosulfide</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbonMonoxide -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbonMonoxide">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#gas"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbonCompound"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CO</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carbon monoxide</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#cerium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#cerium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rareEarth"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ce</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cerium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalComposition -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalComposition">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#composition"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemical composition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalCompound -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalCompound">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalSubstance"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> a chemical substance that is composed of a particular set of molecules or ions. Two or more elements combined into one substance, through a chemical reaction, form what is called a chemical compound</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalElement -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalElement">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalSubstance"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> a chemical substance that is made up of a particular kind of atoms and hence cannot be broken down or transformed by a chemical reaction into a different element, though it can be transmutated into another element through a nuclear reaction</skos-core:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemical element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalEquilibrium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalEquilibrium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#equilibrium"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemical equilibrium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalEvolution -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalEvolution">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemical evolution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalMixture -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalMixture"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalSubstance -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalSubstance">
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> any material with a definite chemical composition</skos-core:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemical Substance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemiluminescence -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemiluminescence">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#luminescence"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemiluminescence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemistry -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemistry">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#scientificField"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemistry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chlorine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chlorine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cl</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chlorine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chromium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chromium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cr</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chromium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#cobalt -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#cobalt">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Co</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cobalt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#composition -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#composition">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">composition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#continuousSpectrum -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#continuousSpectrum">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#spectrum"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">continuous spectrum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#copper -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#copper">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cu</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">copper</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#curium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#curium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cm</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">curium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#cyanoacetylene -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#cyanoacetylene">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbonCompound"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cyanoacetylene</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#cyanodiacetylene -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#cyanodiacetylene">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbonCompound"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cyanodiacetylene</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#cyanogen -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#cyanogen">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbonCompound"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CN</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cyanogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#cyanogenBand -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#cyanogenBand">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecularBand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#cyanogenLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#cyanogenLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cyanogen line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#cyanopolyene -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#cyanopolyene">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbonCompound"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cyanopolyene</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#darmtadtium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#darmtadtium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ds</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">darmtadtium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#deuterium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#deuterium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogen"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deuterium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#doublet -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#doublet">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#multiplet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#dubnium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#dubnium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Db</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dubnium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#dysprosium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#dysprosium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rareEarth"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dy</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dysprosium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#einsteinium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#einsteinium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Es</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">einsteinium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#emissionLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#emissionLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emission line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#erbium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#erbium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rareEarth"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Er</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">erbium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ethane -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ethane">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrocarbon"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ethane</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ethylene -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ethylene">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrocarbon"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ethylene</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#europium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#europium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rareEarth"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eu</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">europium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#excitationPotential -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#excitationPotential">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fermium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fermium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fm</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fermium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#florine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#florine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">florine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#forbiddenLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#forbiddenLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#emissionLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">forbidden line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#francium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#francium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fr</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">francium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#atom"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalElement"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fundamental chemical element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#gadolinium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#gadolinium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rareEarth"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gd</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gadolinium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#gallium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#gallium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ga</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gallium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#gammaRayLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#gammaRayLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#gammaRayRadiation"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gamma ray line</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gamma-ray line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#gas -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#gas"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#gasContent -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#gasContent">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#composition"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gas content</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#germanium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#germanium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ge</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">germanium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#gold -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#gold">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Au</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gold</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#graphite -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#graphite">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalSubstance"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">graphite</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#groundState -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#groundState">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hafnium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hafnium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hf</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hafnium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hassium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hassium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hs</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hassium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#helium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#helium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">He</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">helium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#holmium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#holmium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rareEarth"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ho</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">holmium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydratedCarbon -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydratedCarbon">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#carbonCompound"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrocarbon"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecule"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CH</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hydrated carbon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrocarbon -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrocarbon">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalCompound"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hydrocarbon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogen -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogen">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hydrogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogenLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogenLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogenSpectralFeature"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hydrogen line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogenSpectralFeature -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogenSpectralFeature">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogenSpectrum -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogenSpectrum">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#spectrum"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hydrogen spectrum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydroxylRadical -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydroxylRadical">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ion"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#radical"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OH</skos-core:altLabel>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OH radical</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hydroxyl radical</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hyperfineLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hyperfineLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hyperfine line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#indium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#indium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">indium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#infraredRadiation -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#infraredRadiation"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#intercombinationLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#intercombinationLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralLine"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ion temperature&gt;A spectral line emitted in a transition between energy levels that have different multiplicities, that is, different values of the total spin quantum number. </skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#iodine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#iodine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iodine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ion -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ion">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#compositeParticle"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#particle"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">charged particle</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ionComposition -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ionComposition">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#composition"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ion composition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ionTemperature -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ionTemperature">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#temperature"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ion temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ionization -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ionization">
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ionisation	UK</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ionization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ionizationEquilibrium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ionizationEquilibrium">
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ionisation equilibrium	UK</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ionization equilibrium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ionizedGas -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ionizedGas">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#gas"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ionized gas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#iridium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#iridium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ir</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iridium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#iron -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#iron">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fe</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iron</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#isotope -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#isotope">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalElement"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isotope</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#isotopicAbundance -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#isotopicAbundance">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#abundance"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isotopic abundance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#isotopicComposition -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#isotopicComposition">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#composition"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isotopic composition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#kLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#kLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#absorptionLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#krypton -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#krypton">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kr</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">krypton</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lambdaDoublet -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lambdaDoublet">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#setOfLines"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Two microwave lines in of the spectrum of the OH molecule caused by the splitting of electronic levels.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lanthanum -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lanthanum">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rareEarth"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lanthanum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lawrencium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lawrencium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lr</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lawrencium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lead -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lead">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pb</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lead</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lightEmission -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lightEmission"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineBroadening -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineBroadening">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineFormation"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spectral line broadening</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">line broadening</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineCenter -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineCenter">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineParameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineFormation -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineFormation">
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spectral line formation</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">line formation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineIntensity -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineIntensity">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineParameter"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">line intensity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineParameter -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineParameter">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#radiationMeasurement"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">line parameter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineRatio -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineRatio">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">line ratio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineSpectrum -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineSpectrum">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#spectrum"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">line spectrum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineWidth -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineWidth">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineParameter"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spectral line width</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">line width</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lithium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lithium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Li</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lithium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lutetium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lutetium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rareEarth"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lu</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lutetium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#magnesium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#magnesium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mg</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">magnesium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#manganese -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#manganese">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mn</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manganese</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#meitnerium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#meitnerium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mt</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meitnerium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#mendelevium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#mendelevium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Md</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mendelevium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#mercury -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#mercury">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hg</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mercury</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#metalAbundance -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#metalAbundance">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#abundance"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">metallicity</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">metal abundance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#metalLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#metalLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">metal line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#methane -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#methane">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecule"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CH4</skos-core:altLabel>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CH_4</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">methane</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molarVolumeOfIdealGas -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molarVolumeOfIdealGas">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#physicoChemicalConstant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecularBand -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecularBand">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralBand"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molecular band</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecularHydrogen -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecularHydrogen">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogen"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecule"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molecular hydrogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecularLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecularLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molecular line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecularSpectroscopy -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecularSpectroscopy">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/instruments.owl#spectroscopy"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molecular spectroscopy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecularSpectrum -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecularSpectrum">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#spectrum"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molecular spectrum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecule -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecule">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#matter"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molecule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molybdenum -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molybdenum">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mo</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molybdenum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#multiplet -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#multiplet">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#setOfLines"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#naturalLineBroadening -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#naturalLineBroadening">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineBroadening"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">natural line broadening</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#naturalLineWidth -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#naturalLineWidth">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lineWidth"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">natural line width</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#negativeHIon -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#negativeHIon">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogen"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H minus ion</skos-core:altLabel>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H-</skos-core:altLabel>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H- ion</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negative H ion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#neodymium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#neodymium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rareEarth"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nd</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neodymium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#neon -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#neon">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ne</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#neptunium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#neptunium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Np</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neptunium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#neutralGas -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#neutralGas"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#nickel -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#nickel">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ni</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nickel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#niobium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#niobium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nb</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">niobium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#nitrogen -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#nitrogen">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nitrogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#nobelium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#nobelium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nobelium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#organicMatter -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#organicMatter">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organic matter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#organicMolecule -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#organicMolecule">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecule"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#organicMatter"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organic molecule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#orthohydrogen -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#orthohydrogen">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecularHydrogen"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">orthohydrogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#osmium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#osmium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Os</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">osmium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#overabundance -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#overabundance">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#abundance"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">overabundance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#oxygen -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#oxygen">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oxygen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#palladium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#palladium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pd</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">palladium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#parahydrogen -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#parahydrogen">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecularHydrogen"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parahydrogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#phosphorus -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#phosphorus">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phosphorus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#photochemistry -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#photochemistry">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">photochemistry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#photodissociation -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#photodissociation">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">photodissociation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#photoionization -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#photoionization">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ionization"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">photoionisation	UK</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">photoionization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#photoluminescence -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#photoluminescence">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#lightEmission"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">photoluminescence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#physicoChemicalConstant -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#physicoChemicalConstant">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#physicalConstant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#platinum -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#platinum">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pt</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">platinum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#plutonium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#plutonium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pu</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plutonium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#polonium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#polonium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Po</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">polonium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#polycyclicHydrocarbon -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#polycyclicHydrocarbon">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrocarbon"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">polycyclic hydrocarbon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#potassium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#potassium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">potassium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#praseodymium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#praseodymium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rareEarth"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pr</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">praseodymium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#promethium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#promethium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pm</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">promethium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#protactinium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#protactinium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pa</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protactinium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#radical -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#radical">
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atomic or molecular species with unpaired electrons on an otherwise open shell configuration. These unpaired electrons are usually highly reactive</skos-core:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radical</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#radium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#radium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ra</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#radon -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#radon">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rn</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rareEarth -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rareEarth">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rare earth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#recombination -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#recombination">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recombination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#recombinationLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#recombinationLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#emissionLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recombination line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#resonanceLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#resonanceLine">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resonance line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rhenium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rhenium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Re</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rhenium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rhodium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rhodium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rh</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rhodium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#roentgenium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#roentgenium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rg</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">roentgenium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rubidium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rubidium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rb</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rubidium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ruthenium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ruthenium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ru</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ruthenium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rutherfordium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rutherfordium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rf</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rutherfordium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#samarium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#samarium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rareEarth"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sm</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">samarium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#scandium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#scandium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rareEarth"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sc</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scandium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#seaborgium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#seaborgium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sg</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">seaborgium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#selenium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#selenium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Se</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">selenium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#semiForbiddenLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#semiForbiddenLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#emissionLine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#setOfLines -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#setOfLines">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#setOfMolecularLines -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#setOfMolecularLines">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#setOfLines"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#silicon -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#silicon">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Si</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">silicon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#siliconMonoxide -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#siliconMonoxide">
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SiO</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">silicon monoxide</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#silver -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#silver">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ag</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">silver</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#sodium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#sodium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Na</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sodium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralBand -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralBand"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralFeature -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralFeature">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#radiationMeasurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralIndex -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralIndex">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spectral index</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralLine">
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spectrum line</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spectral line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectroscopicAnalysis -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectroscopicAnalysis">
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spectral analysis</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spectroscopic analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#strontium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#strontium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sr</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">strontium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#sulfur -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#sulfur">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S</skos-core:altLabel>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sulphur</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sulfur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#supermultiplet -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#supermultiplet">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#multiplet"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A multiplet of multiplets.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#tantalum -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#tantalum">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ta</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tantalum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#technetium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#technetium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tc</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">technetium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#technetiumLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#technetiumLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#metalLine"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">technetium line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#tellurium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#tellurium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Te</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tellurium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#temperatureEffect -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#temperatureEffect">
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thermal effect</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">temperature effect on reaction rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#terbium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#terbium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rareEarth"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tb</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">terbium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#thallium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#thallium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tl</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thallium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#thorium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#thorium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Th</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thorium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#thulium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#thulium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rareEarth"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tm</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thulium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#tin -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#tin">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sn</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#titanium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#titanium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ti</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">titanium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#titaniumOxide -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#titaniumOxide">
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TiO</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">titanium oxide</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#traceElement -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#traceElement">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#chemicalElement"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">trace element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#tritium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#tritium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#hydrogen"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tritium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#tungsten -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#tungsten">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tungsten</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ultravioletLine -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ultravioletLine">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralLine"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ultraviolet line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#underabundance -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#underabundance">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#abundance"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">underabundance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#uranium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#uranium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">U</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uranium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#vanadium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#vanadium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">V</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vanadium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#volatile -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#volatile">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">volatile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#water -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#water">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#molecule"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#waterIce -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#waterIce">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#water"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ice</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water ice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#waterLiquid -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#waterLiquid">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#water"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water vapor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#waterVapor -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#waterVapor">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#water"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water vapor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#xenon -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#xenon">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xe</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">xenon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ytterbium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#ytterbium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rareEarth"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yb</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ytterbium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#yttrium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#yttrium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#rareEarth"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Y</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yttrium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#zinc -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#zinc">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zn</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zinc</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#zirconium -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#zirconium">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#fundamentalChemicalElement"/>
+        <skos-core:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zr</skos-core:altLabel>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zirconium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#compositeParticle -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#compositeParticle"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

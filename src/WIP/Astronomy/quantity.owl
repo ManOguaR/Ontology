@@ -1,0 +1,712 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#"
+     xml:base="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl">
+        <owl:imports rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ed Shaya, University of Maryland</dc:creator>
+        <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology covers classes and properties in the quantity model developed for astronomical data. It includes terms from the IVOA Thesaurus plus terms from the UMD astronomical ontology</dc:description>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasAccuracy -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasAccuracy">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantity"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#accuracy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasAxis -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasAxis">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantity"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#index"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantity"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasComponent">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#tupleDeclaration"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasFormat -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasFormat">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#values"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#abstractFormat"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasIndex -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasIndex">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#algorithmOutput"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#index"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasMapping -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasMapping">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#algorithmOutput"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#mapping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasNote -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasNote">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#values"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#note"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasQuantity -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasQuantity">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#axis"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#compositeQuantity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasUnits -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasUnits">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantity"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unit"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unitless"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasValues -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasValues">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantity"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#values"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#NaN -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#NaN">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#dataFormat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#coefficient -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#coefficient">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#polynomial"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#error -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#error">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#accuracy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#errorType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#errorType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#accuracy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasBoolean -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasBoolean">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#numeric"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasDouble -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasDouble">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#numeric"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasFloat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasFloat">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#numeric"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasInteger -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasInteger">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#numeric"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#list -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#list">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#valueList"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#mark -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#mark">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#note"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#maxValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#maxValue">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#interval"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#minValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#minValue">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#interval"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#name">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#negativeError -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#negativeError">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#accuracy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#negativeErrorOnError -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#negativeErrorOnError">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#accuracy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#noData -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#noData">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#dataFormat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#noteId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#noteId">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#note"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#noteRef -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#noteRef">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#note"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#numberOfValueElements -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#numberOfValueElements">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#pad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#pad">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#dataFormat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#positiveError -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#positiveError">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#accuracy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#positiveErrorOnError -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#positiveErrorOnError">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#accuracy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#significantDigits -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#significantDigits">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#accuracy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#size -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#size">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#index"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#text -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#text">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#note"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#value -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#value">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#string"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#valueList"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#abstractFormat -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#abstractFormat">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantityEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#accuracy -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#accuracy">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantityEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#algorithmOutput -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#algorithmOutput">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#values"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#axis -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#axis">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantityEntity"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A table can be formed by a Quantity hasAxis Axis.  Here Axis contains the Quantities (or columns) of the table.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#compositeQuantity -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#compositeQuantity">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantityEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasQuantity"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasValues"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#dataFormat -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#dataFormat">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#abstractFormat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#float -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#float">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#nonInteger"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasDouble"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#floatFormat -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#floatFormat">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#dataFormat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#index -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#index">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantityEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#integer -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#integer">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#number"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasBoolean"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasDouble"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasFloat"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#integerFormat -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#integerFormat">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#dataFormat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#interval -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#interval">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#values"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#maxValue"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#minValue"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#irrational -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#irrational">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#nonInteger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#mapping -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#mapping">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantityEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#nonInteger -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#nonInteger">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#number"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasBoolean"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasInteger"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#note -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#note">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantityEntity"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Need a locator into the ValueList</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#number -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#number">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#numeric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#numeric -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#numeric">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#values"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#numericSetting -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#numericSetting">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#numeric"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#polynomial -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#polynomial">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#mapping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#coefficient"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantity -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantity">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantityEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantityEntity -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantityEntity"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#string -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#string">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#values"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#stringFormat -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#stringFormat">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#dataFormat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#tupleDeclaration -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#tupleDeclaration">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantityEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#valueList -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#valueList">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#values"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#values -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#values">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantityEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#vectorDeclaration -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#vectorDeclaration">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#tupleDeclaration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unit -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unit"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unitless -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl#unitless"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

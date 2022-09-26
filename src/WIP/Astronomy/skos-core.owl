@@ -1,0 +1,304 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#"
+     xml:base="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos-core="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#">
+    <owl:Ontology rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl">
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">--- $Revision: 1.1 $ ---</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#altLabel"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#altSymbol -->
+
+    <owl:AnnotationProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#altSymbol"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#changeNote -->
+
+    <owl:AnnotationProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#changeNote"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#definition"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#editorialNote -->
+
+    <owl:AnnotationProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#editorialNote"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#example -->
+
+    <owl:AnnotationProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#example"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#hiddenLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#hiddenLabel"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#historyNote -->
+
+    <owl:AnnotationProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#historyNote"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#note -->
+
+    <owl:AnnotationProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#note"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#prefLabel"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#prefSymbol -->
+
+    <owl:AnnotationProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#prefSymbol"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#scopeNote -->
+
+    <owl:AnnotationProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#scopeNote"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#symbol -->
+
+    <owl:AnnotationProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#symbol"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#broader -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#broader">
+        <rdfs:subPropertyOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#semanticRelation"/>
+        <owl:inverseOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#narrower"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#hasTopConcept -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#hasTopConcept">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#ConceptScheme"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#inScheme -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#inScheme">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#Concept"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#isPrimarySubjectOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#isPrimarySubjectOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#isSubjectOf"/>
+        <owl:inverseOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#primarySubject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#isSubjectOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#isSubjectOf">
+        <owl:inverseOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#subject"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#member -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#member">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#Collection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#memberList -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#memberList">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#OrderedCollection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#narrower -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#narrower">
+        <rdfs:subPropertyOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#semanticRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#primarySubject -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#primarySubject">
+        <rdfs:subPropertyOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#subject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#related -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#related">
+        <rdfs:subPropertyOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#semanticRelation"/>
+        <owl:inverseOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#related"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#semanticRelation -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#semanticRelation">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#Concept"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#subject -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#subject">
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#Concept"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#subjectIndicator -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#subjectIndicator">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#Document"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#Collection -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#Collection">
+        <owl:disjointWith rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#Concept -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#Concept"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#ConceptScheme -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#ConceptScheme"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#Document -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#Document"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#Image -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#Image"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#OrderedCollection -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#OrderedCollection">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#Collection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#memberList"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#memberList"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#List -->
+
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

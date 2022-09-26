@@ -1,0 +1,1511 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://data.xeralabs.net/ontology/rpg#"
+     xml:base="http://data.xeralabs.net/ontology/rpg"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://data.xeralabs.net/ontology/rpg">
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <terms:creator rdf:resource="https://github.com/charvolant"/>
+        <terms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+        <rdfs:comment xml:lang="en">
+      The RPG ontology contains abstract descriptions of common RPG concepts, such as Characters, Skills, NPCs etc. A specigic RPG will specialise these concepts to fit the RPG.
+    </rdfs:comment>
+        <rdfs:label xml:lang="en">Generic Role Playing Game Ontology</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.travellerrpg.com/CotI/Discuss/showthread.php?t=30041"/>
+        <skos:scopeNote xml:lang="en">
+      RPGs represent imaginary situations.
+
+      Data available on the semantic web represent a wide variety of resources, from the wholely imaginary to the completely real.
+
+      This ontology imports SKOS for knowledge descriptions and FOAF for player information. Otherwise, it keeps the real world at a distance, so that difficulties with software confusing a cyberpunk description of London and the real London are kept to a minimum.
+    </skos:scopeNote>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#discriminator -->
+
+    <owl:AnnotationProperty rdf:about="http://data.xeralabs.net/ontology/rpg#discriminator">
+        <rdfs:comment xml:lang="en">What sub-property to use when determining template inhertiance. Template inheritance is, by default, decided on simple property identity. If there are properties that refer to a number of different sorts of things, then this property can be used to further discriminate based on the value of the property.</rdfs:comment>
+        <rdfs:label xml:lang="en">discriminator</rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#inherit -->
+
+    <owl:AnnotationProperty rdf:about="http://data.xeralabs.net/ontology/rpg#inherit">
+        <rdfs:comment xml:lang="en">This property is inherited by an object using a template. Inherit is normally assumed to be true for template statements. If a property is marked as inherit:false then resources using the template do not use these values. This can be useful for properties that more appropriately describe the class of things expressed by the template.</rdfs:comment>
+        <rdfs:label xml:lang="en">inherit </rdfs:label>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#referenceMaterial -->
+
+    <owl:AnnotationProperty rdf:about="http://data.xeralabs.net/ontology/rpg#referenceMaterial">
+        <rdfs:comment xml:lang="en">A reference to a document or concept that contains additional information.</rdfs:comment>
+        <rdfs:label xml:lang="en">reference material</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+        <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights">
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Description -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#cardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#cardinality"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#amount -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#amount">
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#Amount"/>
+        <rdfs:comment xml:lang="en">An amount of some value</rdfs:comment>
+        <rdfs:label xml:lang="en">amount</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#date -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#date">
+        <rdfs:subPropertyOf rdf:resource="http://data.xeralabs.net/ontology/rpg#occurrenceAt"/>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#Date"/>
+        <rdfs:comment xml:lang="en">The date of an event or other occurance</rdfs:comment>
+        <rdfs:label xml:lang="en">date</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#dateSystem -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#dateSystem">
+        <rdfs:subPropertyOf rdf:resource="http://data.xeralabs.net/ontology/rpg#unit"/>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#DateSystem"/>
+        <rdfs:comment xml:lang="en">The dating system used to record a date</rdfs:comment>
+        <rdfs:label xml:lang="en">date system</rdfs:label>
+        <skos:prefLabel xml:lang="en">calendar</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#duration -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#duration">
+        <rdfs:subPropertyOf rdf:resource="http://data.xeralabs.net/ontology/rpg#amount"/>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#Duration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The duration of an event or process</rdfs:comment>
+        <rdfs:label xml:lang="en">duration </rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#fromUnit -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#fromUnit">
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#Conversion"/>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#Unit"/>
+        <rdfs:label xml:lang="en">from unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#hasAttribute -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#hasAttribute">
+        <rdfs:subPropertyOf rdf:resource="http://data.xeralabs.net/ontology/rpg#hasFeature"/>
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#GameEntity"/>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#Attribute"/>
+        <rdfs:comment xml:lang="en">Gives the attributes that describe an actor</rdfs:comment>
+        <rdfs:label xml:lang="en">has attribute</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#hasFaculty -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#hasFaculty">
+        <rdfs:subPropertyOf rdf:resource="http://data.xeralabs.net/ontology/rpg#hasFeature"/>
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#GameEntity"/>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#Faculty"/>
+        <discriminator rdf:resource="http://data.xeralabs.net/ontology/rpg#inFacultyType"/>
+        <rdfs:comment xml:lang="en">Indicates that an actor has a specific faculty available</rdfs:comment>
+        <rdfs:label xml:lang="en">has faculty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#hasFeature -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#hasFeature">
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#GameEntity"/>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#Feature"/>
+        <rdfs:comment xml:lang="en">Indicates that a character possesses a certain feature.</rdfs:comment>
+        <rdfs:label xml:lang="en">has feature</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#hasMass -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#hasMass">
+        <rdfs:subPropertyOf rdf:resource="http://data.xeralabs.net/ontology/rpg#hasAttribute"/>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#Mass"/>
+        <rdfs:comment xml:lang="en">Gives the basic mass of a game item.</rdfs:comment>
+        <rdfs:label xml:lang="en">mass</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#hasPrice -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#hasPrice">
+        <rdfs:subPropertyOf rdf:resource="http://data.xeralabs.net/ontology/rpg#hasAttribute"/>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#Price"/>
+        <rdfs:comment xml:lang="en">
+      Gives the price of an item.
+
+      If left further unspecified, this generallty means the common, in-game price.
+    </rdfs:comment>
+        <rdfs:label xml:lang="en">price</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#hasSense -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#hasSense">
+        <rdfs:subPropertyOf rdf:resource="http://data.xeralabs.net/ontology/rpg#hasFeature"/>
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#GameEntity"/>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#Sense"/>
+        <discriminator rdf:resource="http://data.xeralabs.net/ontology/rpg#inSenseType"/>
+        <rdfs:comment xml:lang="en">Indicates that an actor has a specific sense available</rdfs:comment>
+        <rdfs:label xml:lang="en">has sense</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#hasSetting -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#hasSetting">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#Setting"/>
+        <rdfs:comment xml:lang="en">Indiicates that a gane entity, state or template applies to or comes from a particular setting.</rdfs:comment>
+        <rdfs:label xml:lang="en">has setting</rdfs:label>
+        <skos:scopeNote xml:lang="en">Settings themselves may have parent settings.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#hasSkill -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#hasSkill">
+        <rdfs:subPropertyOf rdf:resource="http://data.xeralabs.net/ontology/rpg#hasFeature"/>
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#GameEntity"/>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#Skill"/>
+        <discriminator rdf:resource="http://data.xeralabs.net/ontology/rpg#inSkillType"/>
+        <rdfs:comment xml:lang="en">Indicates that an actor has a level of a specific skill</rdfs:comment>
+        <rdfs:label xml:lang="en">has skill</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#hasState -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#hasState">
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#GameEntity"/>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#State"/>
+        <rdfs:comment xml:lang="en">Indicates that a game item is currently in a particular state</rdfs:comment>
+        <rdfs:label xml:lang="en">is in state</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#inFacultyType -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#inFacultyType">
+        <rdfs:subPropertyOf rdf:resource="http://data.xeralabs.net/ontology/rpg#inFeatureType"/>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#Faculty"/>
+        <rdfs:comment xml:lang="en">Gives the type of faculty that a faculty level refers to.</rdfs:comment>
+        <rdfs:label xml:lang="en">in faculty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#inFeatureType -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#inFeatureType">
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#Feature"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">Indicates that a feature is associated with a particular type of feature concept.</rdfs:comment>
+        <rdfs:label xml:lang="en">in feature type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#inSenseType -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#inSenseType">
+        <rdfs:subPropertyOf rdf:resource="http://data.xeralabs.net/ontology/rpg#inFeatureType"/>
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#Sense"/>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#SenseType"/>
+        <rdfs:comment xml:lang="en">Gives the speciifc sense that a sense level gives the capability level of.</rdfs:comment>
+        <rdfs:label xml:lang="en">in sense</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#inSkillType -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#inSkillType">
+        <rdfs:subPropertyOf rdf:resource="http://data.xeralabs.net/ontology/rpg#inFeatureType"/>
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#Skill"/>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#SkillType"/>
+        <rdfs:comment xml:lang="en">Indicates that a skill level is in a specific skill.</rdfs:comment>
+        <rdfs:label xml:lang="en">in skill</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#isPortrayedBy -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#isPortrayedBy">
+        <owl:inverseOf rdf:resource="http://data.xeralabs.net/ontology/rpg#portrays"/>
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#Character"/>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#Participant"/>
+        <rdfs:comment xml:lang="en">Indicates that a character is portrayed by a specific participant.</rdfs:comment>
+        <rdfs:label xml:lang="en">is portrayed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#level -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#level">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://data.xeralabs.net/ontology/rpg#Feature"/>
+                    <rdf:Description rdf:about="http://data.xeralabs.net/ontology/rpg#State"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#occurrenceAt -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#occurrenceAt">
+        <rdfs:comment xml:lang="en">When something has happened </rdfs:comment>
+        <rdfs:label xml:lang="en">ocurrence  at</rdfs:label>
+        <skos:scopeNote xml:lang="en">Sub-properties describe how an occurrence is measured: an absolute date, an interval since some other event etc.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#organisation -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#organisation">
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#Organisation"/>
+        <rdfs:comment xml:lang="en">Associated with a game organisation</rdfs:comment>
+        <rdfs:label xml:lang="en">organisation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#parent -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#parent">
+        <rdfs:subPropertyOf rdf:resource="http://data.xeralabs.net/ontology/rpg#related"/>
+        <rdfs:comment xml:lang="en">Indicates a parent relationship between two game entities</rdfs:comment>
+        <rdfs:label xml:lang="en">parent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#portrays -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#portrays">
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#Participant"/>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#Character"/>
+        <rdfs:comment xml:lang="en">A participant portrays a character, speaking for the characters actions and controling the character&apos;s decsiions.</rdfs:comment>
+        <rdfs:label xml:lang="en">portrays</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#related -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#related">
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#GameEntity"/>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#GameEntity"/>
+        <rdfs:comment xml:lang="en">Indicates that two game entities are related in some way</rdfs:comment>
+        <rdfs:label xml:lang="en">related </rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#settingConcept -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#settingConcept">
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#Setting"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">A concept that helps define the nature of a setting.</rdfs:comment>
+        <rdfs:label xml:lang="en">setting concept</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#template -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#template">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#Template"/>
+        <rdfs:comment xml:lang="en">Indicates that the subject uses the object as a template.</rdfs:comment>
+        <rdfs:label xml:lang="en">template</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#toUnit -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#toUnit">
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#Conversion"/>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#Unit"/>
+        <rdfs:label xml:lang="en">to unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#unit -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#unit">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://data.xeralabs.net/ontology/rpg#Amount"/>
+                    <rdf:Description rdf:about="http://data.xeralabs.net/ontology/rpg#Attribute"/>
+                    <rdf:Description rdf:about="http://data.xeralabs.net/ontology/rpg#Date"/>
+                    <rdf:Description rdf:about="http://data.xeralabs.net/ontology/rpg#State"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#Unit"/>
+        <rdfs:comment xml:lang="en">The unit a quanity is expressed in.</rdfs:comment>
+        <rdfs:label xml:lang="en">unit</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+  <!-- http://data.xeralabs.net/ontology/rpg#usesFeature -->
+
+  <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#usesFeature">
+    <rdfs:comment xml:lang="en">Indicates that a game activity uses a specific feature type. </rdfs:comment>
+    <rdfs:comment xml:lang="en">Sub-properties describe what sort of feature is used by the activity. These may be a class or a reference to an instance, depdending on how the feature structure is organised.</rdfs:comment>
+    <rdfs:label xml:lang="en">uses feature</rdfs:label>
+  </owl:ObjectProperty>
+
+  <!-- http://data.xeralabs.net/ontology/rpg#year -->
+
+    <owl:ObjectProperty rdf:about="http://data.xeralabs.net/ontology/rpg#year">
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#Date"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.xeralabs.net/ontology/rpg#year"/>
+                <owl:someValuesFrom rdf:resource="http://data.xeralabs.net/ontology/rpg#Date"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://data.xeralabs.net/ontology/rpg#Date"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#attribute -->
+
+    <owl:DatatypeProperty rdf:about="http://data.xeralabs.net/ontology/rpg#attribute">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://data.xeralabs.net/ontology/rpg#Amount"/>
+                    <rdf:Description rdf:about="http://data.xeralabs.net/ontology/rpg#Date"/>
+                    <rdf:Description rdf:about="http://data.xeralabs.net/ontology/rpg#Feature"/>
+                    <rdf:Description rdf:about="http://data.xeralabs.net/ontology/rpg#State"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:comment xml:lang="en">An attribute of some state of affairs</rdfs:comment>
+        <rdfs:label xml:lang="en">attribute</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#conversionDifference -->
+
+    <owl:DatatypeProperty rdf:about="http://data.xeralabs.net/ontology/rpg#conversionDifference">
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#Conversion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">The amount to add (or subtract for negative values) from an amount of the from unit to conver to the to unit.</rdfs:comment>
+        <rdfs:label xml:lang="en">conversion difference</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#conversionRatio -->
+
+    <owl:DatatypeProperty rdf:about="http://data.xeralabs.net/ontology/rpg#conversionRatio">
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#Conversion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">The number to to units produced by one from unit.</rdfs:comment>
+        <rdfs:label xml:lang="en">conversion ratio</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#dayOfMonth -->
+
+    <owl:DatatypeProperty rdf:about="http://data.xeralabs.net/ontology/rpg#dayOfMonth">
+        <rdfs:subPropertyOf rdf:resource="http://data.xeralabs.net/ontology/rpg#attribute"/>
+        <rdfs:comment xml:lang="en">The day of an event within a month</rdfs:comment>
+        <rdfs:label xml:lang="en">day of month</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#dayOfYear -->
+
+    <owl:DatatypeProperty rdf:about="http://data.xeralabs.net/ontology/rpg#dayOfYear">
+        <rdfs:subPropertyOf rdf:resource="http://data.xeralabs.net/ontology/rpg#attribute"/>
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#Date"/>
+        <rdfs:comment xml:lang="en">The day within a year of a date</rdfs:comment>
+        <rdfs:label xml:lang="en">day of year</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#fixedConversion -->
+
+    <owl:DatatypeProperty rdf:about="http://data.xeralabs.net/ontology/rpg#fixedConversion">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#Conversion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="en">This is a fixed conversion, defined by the nature of the units and, therefore, will not vary from setting to setting.</rdfs:comment>
+        <rdfs:label xml:lang="en">fixed conversion</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#level -->
+
+    <owl:DatatypeProperty rdf:about="http://data.xeralabs.net/ontology/rpg#level">
+        <rdfs:subPropertyOf rdf:resource="http://data.xeralabs.net/ontology/rpg#attribute"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#month -->
+
+    <owl:DatatypeProperty rdf:about="http://data.xeralabs.net/ontology/rpg#month">
+        <rdfs:subPropertyOf rdf:resource="http://data.xeralabs.net/ontology/rpg#attribute"/>
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#Date"/>
+        <rdfs:comment xml:lang="en">The month of a date</rdfs:comment>
+        <rdfs:label xml:lang="en">month</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#quantity -->
+
+    <owl:DatatypeProperty rdf:about="http://data.xeralabs.net/ontology/rpg#quantity">
+        <rdfs:subPropertyOf rdf:resource="http://data.xeralabs.net/ontology/rpg#attribute"/>
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#Amount"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">
+      The value of a feature or state.
+
+      Some features or states do not have a value associated with them, in which case the value is not needed.
+    </rdfs:comment>
+        <rdfs:label xml:lang="en">value</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://data.xeralabs.net/ontology/rpg#level"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#year -->
+
+    <owl:DatatypeProperty rdf:about="http://data.xeralabs.net/ontology/rpg#year">
+        <rdfs:subPropertyOf rdf:resource="http://data.xeralabs.net/ontology/rpg#attribute"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#value -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#value">
+        <rdfs:subPropertyOf rdf:resource="http://data.xeralabs.net/ontology/rpg#attribute"/>
+        <rdfs:domain rdf:resource="http://data.xeralabs.net/ontology/rpg#Amount"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Actor -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Actor">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#GameEntity"/>
+        <owl:disjointWith rdf:resource="http://data.xeralabs.net/ontology/rpg#Asset"/>
+        <owl:disjointWith rdf:resource="http://data.xeralabs.net/ontology/rpg#Event"/>
+        <owl:disjointWith rdf:resource="http://data.xeralabs.net/ontology/rpg#Place"/>
+        <rdfs:comment xml:lang="en">
+      Something that can be interacted with within the game.
+
+      Actors can be modelled within the game to various degrees of fidelity. For example, a player character may be more detailed than an animal that the character encounters.
+    </rdfs:comment>
+        <rdfs:label xml:lang="en">Actor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Adventure -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Adventure">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Setting"/>
+        <rdfs:comment xml:lang="en">A story-level setting for a game, usually with a clear beginning, middle and end.</rdfs:comment>
+        <rdfs:label xml:lang="en">Adventure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Amount -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Amount">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.xeralabs.net/ontology/rpg#unit"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.xeralabs.net/ontology/rpg#Unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A quantity of something</rdfs:comment>
+        <rdfs:label xml:lang="en">Amount</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Asset -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Asset">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#GameEntity"/>
+        <owl:disjointWith rdf:resource="http://data.xeralabs.net/ontology/rpg#Event"/>
+        <owl:disjointWith rdf:resource="http://data.xeralabs.net/ontology/rpg#Place"/>
+        <rdfs:comment xml:lang="en">An object within the game that can be used or owned by an actor.</rdfs:comment>
+        <rdfs:label xml:lang="en">Asset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Attribute -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Attribute">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Feature"/>
+        <rdfs:comment xml:lang="en">A descriptive attribute of a character or item.</rdfs:comment>
+        <rdfs:label xml:lang="en">Attribute</rdfs:label>
+        <skos:example xml:lang="en">Examples are strength, size, education, as well as sex, hair colour, etc.</skos:example>
+        <skos:scopeNote xml:lang="en">
+      Attributes are generally fixed things about a character or things which change very slowly.
+
+      Attributes are generally central to the game system and are descibed via subclassing for a specific RPG, rather than by referencing individuals.
+    </skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Campaign -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Campaign">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Setting"/>
+        <rdfs:comment xml:lang="en">A series of events and adventures featuring a continuing set of chracters and settings.</rdfs:comment>
+        <rdfs:label xml:lang="en">Campaign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Character -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Character">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Actor"/>
+        <owl:disjointWith rdf:resource="http://data.xeralabs.net/ontology/rpg#Extra"/>
+        <owl:disjointWith rdf:resource="http://data.xeralabs.net/ontology/rpg#Organisation"/>
+        <rdfs:comment xml:lang="en">An RPG representation of a person or similar within-game creature capable of making its own decsions. </rdfs:comment>
+        <rdfs:label xml:lang="en">Character</rdfs:label>
+        <skos:scopeNote xml:lang="en">Characters are usually modelled as something that could be controlled by a player, even if the character is not.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Conversion -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Conversion">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#SettingState"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.xeralabs.net/ontology/rpg#fromUnit"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.xeralabs.net/ontology/rpg#Unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.xeralabs.net/ontology/rpg#toUnit"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.xeralabs.net/ontology/rpg#Unit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.xeralabs.net/ontology/rpg#conversionRatio"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.xeralabs.net/ontology/rpg#fixedConversion"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A conversion between two units.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A date according to a system of dates.</rdfs:comment>
+        <rdfs:label xml:lang="en">Conversion</rdfs:label>
+        <skos:scopeNote xml:lang="en">Generally, conversions are fixed and apply to the highest level setting. However, some conversions such as exchange rates may vary from setting to setting.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Currency -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Currency">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Unit"/>
+        <rdfs:comment xml:lang="en">A medium of exchange</rdfs:comment>
+        <rdfs:label xml:lang="en">Currency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Date -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Date">
+        <rdfs:comment xml:lang="en">A date according to some calendar</rdfs:comment>
+        <rdfs:label xml:lang="en">Date</rdfs:label>
+        <skos:scopeNote xml:lang="en">The accuracy of a date is determined by its attributes, which may include year, month, day of year, day of month, time values, etc.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#DateSystem -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#DateSystem">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Unit"/>
+        <rdfs:comment xml:lang="en">A real or fantasy date system.</rdfs:comment>
+        <rdfs:label xml:lang="en">Date System</rdfs:label>
+        <skos:altLabel xml:lang="en">Calendar</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#DiceConventions -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#DiceConventions">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:comment xml:lang="en">Conventions for describing how die rolls are represented.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dice Conventions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Document -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Document">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Item"/>
+        <rdfs:comment xml:lang="en">An in-game document</rdfs:comment>
+        <rdfs:label xml:lang="en">Document </rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Duration -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Duration">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Amount"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.xeralabs.net/ontology/rpg#unit"/>
+                <owl:allValuesFrom rdf:resource="http://data.xeralabs.net/ontology/rpg#TimeUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A period of time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Duration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#EntityState -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#EntityState">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#State"/>
+        <rdfs:comment xml:lang="en">A state associated with a game entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Entity State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Event -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Event">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#GameEntity"/>
+        <owl:disjointWith rdf:resource="http://data.xeralabs.net/ontology/rpg#Place"/>
+        <rdfs:comment xml:lang="en">An in-game event</rdfs:comment>
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#ExchangeRate -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#ExchangeRate">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Conversion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.xeralabs.net/ontology/rpg#fromUnit"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.xeralabs.net/ontology/rpg#Currency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.xeralabs.net/ontology/rpg#toUnit"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.xeralabs.net/ontology/rpg#Currency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An exchange rate between two currencies.</rdfs:comment>
+        <rdfs:label xml:lang="en">Exchange Rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Extra -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Extra">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Actor"/>
+        <owl:disjointWith rdf:resource="http://data.xeralabs.net/ontology/rpg#Organisation"/>
+        <rdfs:comment xml:lang="en">A game actor modelled to a low level of detail.</rdfs:comment>
+        <rdfs:label xml:lang="en">Extra</rdfs:label>
+        <skos:example xml:lang="en">A wandering monster, a background soldier or a bureaucrat.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Faculty -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Faculty">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.xeralabs.net/ontology/rpg#inFacultyType"/>
+                <owl:someValuesFrom rdf:resource="http://data.xeralabs.net/ontology/rpg#FacultyType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The level of power for an inherent ability or power.</rdfs:comment>
+        <rdfs:label xml:lang="en">Faculty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#FacultyType -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#FacultyType">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">A type of inherent ability or power.</rdfs:comment>
+        <rdfs:label xml:lang="en">Faculty Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Feature -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Feature">
+        <rdfs:comment xml:lang="en">Something that describes a character or an item: a characteristic, a skill, an ability, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">Feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#GameEntity -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#GameEntity">
+        <rdfs:comment xml:lang="en">Something that exists with the role playing game.</rdfs:comment>
+        <rdfs:label xml:lang="en">Game Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#GameMaster -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#GameMaster">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Participant"/>
+        <rdfs:comment xml:lang="en">
+      The participant responsible for creating and managing the situation that forms the role playing game.
+
+      The game master has, in theory if not in practice, complete knowledge of the game world. The game master is also generally responsible for refereeing decsicions within the game.
+    </rdfs:comment>
+        <rdfs:label xml:lang="en">Game Master</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Item -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Item">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Asset"/>
+        <rdfs:comment xml:lang="en">A semi-portable object that is typically carried and used by one person.</rdfs:comment>
+        <rdfs:label xml:lang="en">Item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Language -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Language">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">Language used within a game</rdfs:comment>
+        <rdfs:label xml:lang="en">Language </rdfs:label>
+        <skos:scopeNote xml:lang="en">Game languages are usually associated with specific settings.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Length -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Length">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Amount"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.xeralabs.net/ontology/rpg#unit"/>
+                <owl:allValuesFrom rdf:resource="http://data.xeralabs.net/ontology/rpg#LengthUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#LengthUnit -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#LengthUnit">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Unit"/>
+        <rdfs:comment xml:lang="en">A unit of length or distance</rdfs:comment>
+        <rdfs:label xml:lang="en">Length Unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Mass -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Mass">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Amount"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.xeralabs.net/ontology/rpg#unit"/>
+                <owl:allValuesFrom rdf:resource="http://data.xeralabs.net/ontology/rpg#MassUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">
+      The basic mass of an item or character.
+
+      Generally, this means the most convienient defintiion for role-playing purposes. A character&apos;s mass is their mass in ordingary clothing, without additional items such as armour. A weapon&apos;s mass is generally its mass with a full load of ammunition.
+
+      Depending on setting, mass and weight may be two different things. eg. in Zero-G an item has no weight but still has mass. For purely single-world games, the terms are interchanable.
+    </rdfs:comment>
+        <rdfs:label xml:lang="en">Mass</rdfs:label>
+        <skos:altLabel xml:lang="en">Weight</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#MassUnit -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#MassUnit">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Unit"/>
+        <rdfs:comment xml:lang="en">A unit of mass.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mass Unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Milieau -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Milieau">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Setting"/>
+        <rdfs:comment xml:lang="en">The large-scale setting of a campaign or an adventure. An outline of the world or universe that the game takes place in.</rdfs:comment>
+        <rdfs:label xml:lang="en">Milieau</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#NonPlayerCharacter -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#NonPlayerCharacter">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.xeralabs.net/ontology/rpg#isPortrayedBy"/>
+                <owl:someValuesFrom rdf:resource="http://data.xeralabs.net/ontology/rpg#GameMaster"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Character"/>
+        <rdfs:comment xml:lang="en">A character controlled by a game master or some other agent, such as a software program.</rdfs:comment>
+        <rdfs:label>Non-Player Character</rdfs:label>
+        <skos:prefLabel>NPC</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Organisation -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Organisation">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Actor"/>
+        <rdfs:comment xml:lang="en">An organisation that exists within the game</rdfs:comment>
+        <rdfs:label xml:lang="en">Organisation</rdfs:label>
+        <rdfs:label xml:lang="en-us">Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Participant -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Participant">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">
+      A participant in a role playing game.
+
+      Participants are usually a singular Person. However, groups are also possible.
+    </rdfs:comment>
+        <rdfs:label xml:lang="en">Participant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Place -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Place">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#GameEntity"/>
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Setting"/>
+        <rdfs:comment xml:lang="en">A location within the game</rdfs:comment>
+        <rdfs:label xml:lang="en">Place </rdfs:label>
+        <skos:note xml:lang="en">Places are both actual locations within a game and the settings for adventures</skos:note>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Player -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Player">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Participant"/>
+        <rdfs:comment xml:lang="en">
+      A player in a role playing game &quot;plays&quot; a one or more characters within the game.
+
+      The player has partial knowledge of the game situation.
+    </rdfs:comment>
+        <rdfs:label xml:lang="en">Player</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#PlayerCharacter -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#PlayerCharacter">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.xeralabs.net/ontology/rpg#isPortrayedBy"/>
+                <owl:someValuesFrom rdf:resource="http://data.xeralabs.net/ontology/rpg#Player"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Character"/>
+        <rdfs:comment xml:lang="en">A character directly controlled by a player.</rdfs:comment>
+        <rdfs:label xml:lang="en">Player Character</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Price -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Price">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Amount"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.xeralabs.net/ontology/rpg#unit"/>
+                <owl:allValuesFrom rdf:resource="http://data.xeralabs.net/ontology/rpg#Currency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The price of a game object, in game currency.</rdfs:comment>
+        <rdfs:label xml:lang="en">Price</rdfs:label>
+        <skos:scopeNote xml:lang="en">While usually applied to non-characters, there is no reason why a character cannot have a price as well.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Rules -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Rules">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:comment xml:lang="en">
+      A specific set of RPG rules.
+
+      Rules can be used to define which sets of rules are compatible with characters, settings, etc.
+    </rdfs:comment>
+        <rdfs:label>Rules</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://data.xeralabs.net/ontology/rpg#SourceBook"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Sense -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Sense">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.xeralabs.net/ontology/rpg#inSenseType"/>
+                <owl:someValuesFrom rdf:resource="http://data.xeralabs.net/ontology/rpg#SenseType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">
+      The ability to sense something at a particular level.
+
+      The mehanics of how sense work form part of a specific RPGs mechanics.
+    </rdfs:comment>
+        <rdfs:label xml:lang="en">Sense</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#SenseType -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#SenseType">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">The ability to sense a specific form of phenomenon.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sense Type</rdfs:label>
+        <skos:example xml:lang="en">Visible light, sound, infravision (infrared light), magic.</skos:example>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Setting -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Setting">
+        <rdfs:comment xml:lang="en">A setting is the stage that an RPG is played on. Settings range in scale from entire universes to the bar in which an adventure takes place. A setting may refer to a location, a time period, a social mileau or any combination.</rdfs:comment>
+        <rdfs:label xml:lang="en">Setting</rdfs:label>
+        <skos:scopeNote xml:lang="en">Settings may also act as collections of concepts that describe the nature of the setting. The settingConcept property allows settings to be associated with the concepts that define them.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#SettingState -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#SettingState">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#State"/>
+        <rdfs:comment xml:lang="en">A piece of state that applies to a game setting.</rdfs:comment>
+        <rdfs:label xml:lang="en">Setting State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Skill -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Skill">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.xeralabs.net/ontology/rpg#inSkillType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://data.xeralabs.net/ontology/rpg#SkillType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.xeralabs.net/ontology/rpg#level"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">
+      A level of ability in a specific skill.
+
+      The way that skill levels are represented are specific to a game system.
+    </rdfs:comment>
+        <rdfs:label xml:lang="en">Skill</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#SkillType -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#SkillType">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">A type of skill. Skills are learned abilities that can be improved by a character exercising the skill or undergoing training.</rdfs:comment>
+        <rdfs:label xml:lang="en">Skill Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#SourceBook -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#SourceBook">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:comment xml:lang="en">
+      Additional information about a setting.
+
+      Conceptually, rules define the mechanics of a game and a source book defines the environment to which the rules apply. In practice, an RPG usually consists of a combined set of rules and setting.
+    </rdfs:comment>
+        <rdfs:label xml:lang="en">Source Book</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://data.xeralabs.net/ontology/rpg#Rules"/>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#State -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#State">
+        <rdfs:comment xml:lang="en">A changable status for something in a game.</rdfs:comment>
+        <rdfs:label xml:lang="en">State</rdfs:label>
+        <skos:example xml:lang="en">Examples are things like health statistics, unconciosness, asleep for characters and oiut of ammunition for a gun.</skos:example>
+        <skos:scopeNote xml:lang="en">States are generally strongly connected to the mechanics of an RPG and are generally directly modelled for a specific game.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Template -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Template">
+        <rdfs:comment xml:lang="en">
+      Something that is a template represents an abstract class-like description of a game item. A template can be used to describe a generic instance of an item. Individual items can inherit from the template and override speicifc elements.
+    </rdfs:comment>
+        <rdfs:label xml:lang="en">Tempate</rdfs:label>
+        <skos:scopeNote xml:lang="en">Templates can inherit from other templates. The rules on how inheritance is managed are game-specific.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">The template class is usually added to other entities to indicate that the entity is for use as a template.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#TimeUnit -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#TimeUnit">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Unit"/>
+        <rdfs:comment xml:lang="en">A unit of time (duration)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Unit -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Unit">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">A unit of measure</rdfs:comment>
+        <rdfs:label xml:lang="en">Unit</rdfs:label>
+        <skos:editorialNote xml:lang="en">Resist the tempation to produce a fully fledged system of units and measures. That way lies madness.</skos:editorialNote>
+        <skos:scopeNote xml:lang="en">This heirarchy is a small unit model designed for use within RPGs. Specific types of units are modelled as subclasses.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Vehicle -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Vehicle">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Asset"/>
+        <rdfs:comment xml:lang="en">A means of transporting one or more actors.</rdfs:comment>
+        <rdfs:label xml:lang="en">Vehicle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Volume -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Volume">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Amount"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://data.xeralabs.net/ontology/rpg#unit"/>
+                <owl:allValuesFrom rdf:resource="http://data.xeralabs.net/ontology/rpg#VolumeUnit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A volume of 3-dimensional space</rdfs:comment>
+        <rdfs:label xml:lang="en">Volume</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#VolumeUnit -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#VolumeUnit">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Unit"/>
+        <rdfs:label xml:lang="en">A unit of 3-dimensional size</rdfs:label>
+        <rdfs:label xml:lang="en">Volume</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg#Weapon -->
+
+    <owl:Class rdf:about="http://data.xeralabs.net/ontology/rpg#Weapon">
+        <rdfs:subClassOf rdf:resource="http://data.xeralabs.net/ontology/rpg#Item"/>
+        <rdfs:comment xml:lang="en">A single-person weapon.</rdfs:comment>
+        <rdfs:label xml:lang="en">Weapon</rdfs:label>
+        <skos:scopeNote xml:lang="en">
+      Within a role-playing game, weapons generally refer to personal weapons such as swords, guns, etc. rather than a crew-operated weapon, such as an artillery piece.
+
+      Something like a machine gun or a sniper&apos;s rifle is often formally regarded as a crew-operated weapon. However, from a role-playing perspective it makes sense to treat these things as personal weapons.
+    </skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/LicenseDocument -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/LicenseDocument">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/RightsStatement -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/RightsStatement"/>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#ObjectProperty -->
+
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#ObjectProperty"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#unionOf -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#unionOf"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Document -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Document"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/licenses/by/3.0/ -->
+
+    <owl:NamedIndividual rdf:about="http://creativecommons.org/licenses/by/3.0/">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
+        <rdfs:label xml:lang="en">Creative Commons Attribution 3.0 (Unported)</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://i.creativecommons.org/l/by/3.0/88x31.png"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://data.xeralabs.net/ontology/rpg -->
+
+    <owl:NamedIndividual rdf:about="http://data.xeralabs.net/ontology/rpg"/>
+    
+
+
+    
+
+
+    <!-- http://opensource.org/licenses/MIT -->
+
+    <owl:NamedIndividual rdf:about="http://opensource.org/licenses/MIT">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
+        <rdfs:label xml:lang="en">The MIT License</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://placetime.com/instant/gregorian/ -->
+
+    <owl:NamedIndividual rdf:about="http://placetime.com/instant/gregorian/">
+        <rdf:type rdf:resource="http://data.xeralabs.net/ontology/rpg#DateSystem"/>
+        <referenceMaterial rdf:resource="http://en.wikipedia.org/wiki/Gregorian_calendar"/>
+        <rdfs:comment xml:lang="en">Dates represented by the Gregorian Calendar</rdfs:comment>
+        <rdfs:label xml:lang="en">Gregorian Calendar</rdfs:label>
+        <skos:scopeNote xml:lang="en">This calendar is generally used in an RPG setting to provide a parallel calendar to the game calendar.</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opencontent.org/openpub/ -->
+
+    <owl:NamedIndividual rdf:about="http://www.opencontent.org/openpub/">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
+        <rdfs:label xml:lang="en">Open Publication License v1.0</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.opengamingfoundation.org/ogl.html -->
+
+    <owl:NamedIndividual rdf:about="http://www.opengamingfoundation.org/ogl.html">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
+        <rdfs:label xml:lang="en">Open Game License v1.0 Simplified</rdfs:label>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#unionOf"/>
+        <rdf:Description></rdf:Description>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://data.xeralabs.net/ontology/rpg#level">
+        <rdfs:comment xml:lang="en">
+      Gives the level of a feature or temporary state.
+
+      The concept of a &apos;level&apos; is specific to a specific set of RPG rules and is specified further by sub-ontologies. Some features do not have a level associated with them.
+    </rdfs:comment>
+        <rdfs:label xml:lang="en">level</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://data.xeralabs.net/ontology/rpg#quantity"/>
+        <skos:note xml:lang="en">A level can either refer to a specific enumerated level or a simple, usually numeric, value.</skos:note>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://data.xeralabs.net/ontology/rpg#year">
+        <rdfs:label xml:lang="en">year</rdfs:label>
+        <rdfs:comment xml:lang="en">The year of a date</rdfs:comment>
+        <skos:scopeNote xml:lang="en">The form of a date is dependent on the calndar being used and may include years, months, days or other elements.</skos:scopeNote>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

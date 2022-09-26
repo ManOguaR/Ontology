@@ -1,0 +1,1123 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#"
+     xml:base="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:operation="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#"
+     xmlns:skos-core="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#">
+    <owl:Ontology rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl">
+        <owl:imports rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#Maddends -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#Maddends">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MAddition"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#measurement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#compiledOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#compiledOn">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#compiledProgram"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operatingSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#hasFileAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#hasFileAt">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#computerProgram"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#fileLocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#hasProgram -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#hasProgram">
+        <owl:inverseOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#programFor"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#analysis"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#computerProgram"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#hasRelationship -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#hasRelationship">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#physicalObject"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#relationship"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#hasSpectralIndex -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#hasSpectralIndex">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#powerLawFit"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/chemistry.owl#spectralIndex"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#implements -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#implements">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#computerProgram"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#analysis"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#initialM -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#initialM">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MDivision"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MSubtraction"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#measurement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#input -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#input">
+        <owl:inverseOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputTo"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#computerProgram"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#astroObject"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputQuantity1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputQuantity1">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operation"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputQuantity2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputQuantity2">
+        <rdfs:subPropertyOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputQuantity1"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputQuantity3 -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputQuantity3">
+        <rdfs:subPropertyOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputQuantity1"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputQuantity4 -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputQuantity4">
+        <rdfs:subPropertyOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputQuantity1"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputThing1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputThing1">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputThing2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputThing2">
+        <rdfs:subPropertyOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputThing1"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputThing3 -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputThing3">
+        <rdfs:subPropertyOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputThing1"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputThing4 -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputThing4">
+        <rdfs:subPropertyOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputThing1"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#inputTo">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#astroObject"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#computerProgram"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#isInLanguage -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#isInLanguage">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#computerProgram"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#computerLanguage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#mDivisor -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#mDivisor">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MDivision"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#measurement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#mFactor -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#mFactor">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MMultiplication"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#measurement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#ofNumeric -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#ofNumeric">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MLogarithm"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MNaturalLogarithm"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#numeric"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#ouputThing1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#ouputThing1">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#ouputThing2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#ouputThing2">
+        <rdfs:subPropertyOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#ouputThing1"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#ouputThing3 -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#ouputThing3">
+        <rdfs:subPropertyOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#ouputThing1"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#ouputThing4 -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#ouputThing4">
+        <rdfs:subPropertyOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#ouputThing1"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#output -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#output">
+        <owl:inverseOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputFrom"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#computerProgram"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#astroObject"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputFrom">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#astroObject"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#computerProgram"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputM -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputM">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operationOnMeasurement"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#measurement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputNumber -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputNumber">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#amplitudeOfVector"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorDotProduct"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#number"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputQuantity1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputQuantity1">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operation"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputQuantity2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputQuantity2">
+        <rdfs:subPropertyOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputQuantity1"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputQuantity3 -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputQuantity3">
+        <rdfs:subPropertyOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputQuantity1"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputQuantity4 -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputQuantity4">
+        <rdfs:subPropertyOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputQuantity1"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputVector -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#outputVector">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#reverseVector"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorAddition"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorCrossProduct"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorSubtraction"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#vector"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#programFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#programFor">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#computerProgram"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#analysis"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#reduceByM -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#reduceByM">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MSubtraction"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#measurement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#relates -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#relates">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#analysis"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#physicalObject"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#takesSetting -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#takesSetting">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#computerProgram"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#setting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vector -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vector">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#amplitudeOfVector"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#reverseVector"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#vector"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vector1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vector1">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorAddition"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorCrossProduct"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorDotProduct"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorSubtraction"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#vector"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vector2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vector2">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorAddition"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorCrossProduct"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorDotProduct"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorSubtraction"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#vector"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#Urn -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#Urn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#computerProgram"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#addends -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#addends">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#addition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#base -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#base">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MLogarithm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#choiceOfBase -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#choiceOfBase">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#powerLawFit"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.0</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">naturalLogBase</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10 or e is used for the base of the power law.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#divisor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#divisor">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#division"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What divides into the numerator.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#floatDivisor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#floatDivisor">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MDivision"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Divisor on Measurements besides another Measurement.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#floatFactor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#floatFactor">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MMultiplication"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#Multiplication"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multiplier allowed in Measuremnts.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#hasInitial -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#hasInitial">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#subtraction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#initialValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#initialValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#division"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#isVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#isVersion">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#computerProgram"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#computerLanguage"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operatingSystem"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#reduceBy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#reduceBy">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#subtraction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#takeSettingNamed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#takeSettingNamed">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#computerProgram"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#computerProgram -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#computerProgram"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#astroObject -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/astronomy.owl#astroObject"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MAddition -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MAddition">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#binaryOperation"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operationOnMeasurement"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Addition of measured quantities.  This requires unit checking and handling combining accuracies.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MDivision -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MDivision">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#binaryOperation"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operationOnMeasurement"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Division of measured quantities.  This requires unit checking and handling combining accuracies.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MLogarithm -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MLogarithm">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operationOnMeasurement"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#unaryOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MMultiplication -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MMultiplication">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#binaryOperation"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operationOnMeasurement"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multiplication of measured quantities.  This requires unit checking and handling combining accuracies.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MNaturalLogarithm -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MNaturalLogarithm">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operationOnMeasurement"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#unaryOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MSubtract -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MSubtract">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#computerProgram"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#implements"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#subtraction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#Urn"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">urn:archive.astro.umd.edu/java/subtract.exe</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MSubtraction -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MSubtraction">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#binaryOperation"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operationOnMeasurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#Multiplication -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#Multiplication"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#addition -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#addition">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#binaryOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#amplitudeOfVector -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#amplitudeOfVector">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#unaryOperation"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#analysis -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#analysis"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#binaryOperation -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#binaryOperation">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#mathOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#blackBodyFit -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#blackBodyFit">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#analysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#compiledProgram -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#compiledProgram">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#computerProgram"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#computerLanguage -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#computerLanguage">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#invention"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#correlation -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#correlation">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#difference -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#difference">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#subtraction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#division -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#division">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#binaryOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#exactRelationship -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#exactRelationship">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#fileLocation -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#fileLocation">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#Url"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#logarithm -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#logarithm">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MLogarithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#mathOperation -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#mathOperation">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#multiplication -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#multiplication">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#binaryOperation"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operationOnMeasurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#naturalLogarithm -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#naturalLogarithm">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MNaturalLogarithm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operatingSystem -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operatingSystem">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#invention"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operation -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operation"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operationOnMeasurement -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#operationOnMeasurement">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#mathOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#physicalRelation -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#physicalRelation">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#analysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#powerLawFit -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#powerLawFit">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#analysis"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The value is the amplitude A of the PowerLawFit.  There is also the SpectralIndex, base, and WaveMeasurement where A is referenced.
+Fit = A(Wave)*base^(SpectralIndex)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#ratio -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#ratio">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#MDivision"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#relationship -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#relationship">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#analysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#reverseVector -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#reverseVector">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#unaryOperation"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#segmentedPowerLawFit -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#segmentedPowerLawFit">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#analysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#setting -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#setting">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#parameter"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This could be a dial setting, a flag setting, a parameter setting.  </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#simulation -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#simulation">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#analysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#subtraction -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#subtraction">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#binaryOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#unaryOperation -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#unaryOperation">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#mathOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorAddition -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorAddition">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#binaryOperation"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorCrossProduct -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorCrossProduct">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#binaryOperation"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorDotProduct -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorDotProduct">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorOperation -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorOperation">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#mathOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorSubtraction -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorSubtraction">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#binaryOperation"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#vectorOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#physicalObject -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/physics.owl#physicalObject"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantity -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#Python -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#Python">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#computerLanguage"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

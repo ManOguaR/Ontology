@@ -1,0 +1,2195 @@
+<rdf:RDF xmlns="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#"
+     xml:base="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:operation="http://www.astro.umd.edu/~eshaya/astro-onto/owl/operation.owl#"
+     xmlns:skos-core="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl#">
+    <owl:Ontology rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl">
+        <owl:imports rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl"/>
+        <owl:imports rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl"/>
+        <owl:imports rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/skos-core.owl"/>
+        <owl:imports rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/units.owl"/>
+        <owl:imports rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/unitsInstances.owl"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ed Shaya, University of Maryland</dc:creator>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">geometry.owl</dc:title>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.2</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#alongAxis -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#alongAxis">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinate"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#axis"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#congruentTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#congruentTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#shape"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#shape"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coplanarTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coplanarTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#line"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#line"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#definedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#definedBy">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#shape"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#expression"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#intersection"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#lineSegment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#embeddedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#embeddedIn">
+        <owl:inverseOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#embeds"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#shape"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#region"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#space"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#embeds -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#embeds">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#region"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#space"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#shape"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#fromDirection -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#fromDirection">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angularCoordinate"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#direction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#fromPoint -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#fromPoint">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#direction"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasAmplitude -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasAmplitude">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#vector"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#amplitude"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasArea -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasArea">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#two-D_Shape"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#area"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasBase -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasBase">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#circularCone"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#circle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasBoundary -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasBoundary">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#region"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#shape"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCenter -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCenter">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#dilation"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#center"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCenterOfRotation -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCenterOfRotation">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angleOfRotation"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#rotation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#centerOfRotation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCoordinate -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCoordinate">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinates"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCoordinateDeclaration -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCoordinateDeclaration">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinate"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angleDescription"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#direction"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCoordinates -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCoordinates">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#position"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinateSystem"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#vector"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinates"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasDimension -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasDimension">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#space"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#quantity"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gives the Dimensions that span the space.  Must be consistent with the number in hasDimensionality.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasDirection -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasDirection">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#CartesianCoordinate"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angleDescription"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#vector"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#direction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasFace -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasFace">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#polyhedron"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#face"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasHeight -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasHeight">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#rectangle"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#height"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasLength -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasLength">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#one-D_Shape"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#length"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasLocation">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#region"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#shape"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#position"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasOrigin -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasOrigin">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinateSystem"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasPerimeter -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasPerimeter">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#two-D_Shape"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#perimeter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasPoleDirection -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasPoleDirection">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#sphericalCoordinateSystem"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#direction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasPreimage -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasPreimage">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#transformation"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#region"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#shape"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasProjectionShape -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasProjectionShape">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#projection"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#shape"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasProjectorShape -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasProjectorShape">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#projection"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#shape"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasRegion -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasRegion">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#space"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#region"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any section of the Space</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasSide -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasSide">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#polygon"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#lineSegment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasSlice -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasSlice">
+        <owl:inverseOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#sliceOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#space"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#space"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Says Domain space is superset of Range Space</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasSurfaceArea -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasSurfaceArea">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#three-D_Shape"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#area"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasVertex -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasVertex">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angleDescription"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasVolume -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasVolume">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#three-D_Shape"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#volume"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasWidth -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasWidth">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#rectangle"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#width"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#inCoordinateSystem -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#inCoordinateSystem">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinates"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinateSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#ofCircle -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#ofCircle">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#centralAngleOfCircle"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#chord"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#circle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#ofRegion -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#ofRegion">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#intersection"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#region"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#ofShape -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#ofShape">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#boundary"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#intersection"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#shape"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#parallelTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#parallelTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#line"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#lineSegment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#line"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#lineSegment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#similarTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#similarTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#shape"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#shape"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#skewTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#skewTo">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#line"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#line"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#sliceOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#sliceOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#space"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#space"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inverse of hasSlice.  Points to a larger Space that contains this Space.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#toPoint -->
+
+    <owl:ObjectProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#toPoint">
+        <rdfs:domain rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#direction"/>
+        <rdfs:range rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#point"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasDimensionality -->
+
+    <owl:DatatypeProperty rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasDimensionality">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#space"/>
+                    <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#vector"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#expression -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#expression"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#position -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#position"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#CartesianCoordinate -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#CartesianCoordinate">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#CartesianCoordinateSystem -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#CartesianCoordinateSystem">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinateSystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCoordinate"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#CartesianCoordinate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCoordinate"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coordinate System with orthogonal coordinates</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#LissajousCurve -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#LissajousCurve">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#harmonograph"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Curves generated by the parametric equations
+x(t) = Acos(wx*t - deltax
+y(t) = Bsin(wy*t - deltay
+Circle and ellipse are subclasses.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#acuteAngle -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#acuteAngle">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angle"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">angle less than 90 degree
+</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#amplitude -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#amplitude">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricEntity"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amplitude of a vector</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angle -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angle">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#measurement"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Consists of two rays with the same endPoint</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angleDescription -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angleDescription"/>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angleOfRotation -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angleOfRotation">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angle"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angle swept out by a ray with endPoint at center of rotation
+</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angularCoordinate -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angularCoordinate">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angle"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#any-D_Shape -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#any-D_Shape">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#shape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#arcLength -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#arcLength">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#length"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The length of a section of a circl
+</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#area -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#area">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#surfaceArea"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geometric area of a 2-d  region.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#axis -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#axis">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#vector"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vector from origin in a fiducial direction</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#axonometricProjection -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#axonometricProjection">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#orthographicProjection"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arbitrary oriented projectino plane</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#azimuthalAngle -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#azimuthalAngle">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angularCoordinate"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angle from a fiducial direction (usually the x-direction).  In astronomy, the angle to a celstial object, for an observer, measured along the the horizon clockwise from North to the zenith line (A line perpendicular to the horizon to the object).</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#boundary -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#boundary">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#cabinetProjection -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#cabinetProjection">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#obliqueProjection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#cavalierProjection -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#cavalierProjection">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#obliqueProjection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#center -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#center">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#point"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#centerOfMass -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#centerOfMass">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#center"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Center found by weighting each point by its mass density.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#centerOfRotation -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#centerOfRotation">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#center"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#centralAngleOfCircle -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#centralAngleOfCircle">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#chord -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#chord">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#lineSegment"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chord of a cirlce.  Endpoints are on the circle.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#circle -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#circle">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#ellipse"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasPerimeter"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#circumference"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#circularCone -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#circularCone">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#cone"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Base is circle</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#circumference -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#circumference">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#perimeter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#closedCurve -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#closedCurve">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#curveOnPlane"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#component -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#component">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#measurement"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricEntity"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Component of a vector</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#concavePolygon -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#concavePolygon">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#polygon"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polygon with at least one obtuse interior angle
+</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#cone -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#cone">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#three-D_Shape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#conicSection -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#conicSection">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#curveOnPlane"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#convexPolygon -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#convexPolygon">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#polygon"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polygon with all internal angles acute.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinate -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinate">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#measurement"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricEntity"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For example the xCoordinate or the r-radius.  Not it&apos;s value.  That would be the coordinateComponent.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinateSystem -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinateSystem">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinateTransformation -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinateTransformation">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#transformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinates -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinates">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#position"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#compositeQuantity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/quantity.owl#hasQuantity"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#crossSection -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#crossSection">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#area"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">area of a slice through a solid</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#cube -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#cube">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#rectangularPrism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#curve -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#curve">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#any-D_Shape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#curveOnPlane -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#curveOnPlane">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#two-D_Shape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#cylindricalCoordinateSystem -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#cylindricalCoordinateSystem">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinateSystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCoordinate"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#azimuthalAngle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCoordinate"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#cylindricalRadius"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCoordinate"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#zCoordinate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCoordinate"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">r,z,Theta system</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#cylindricalRadialCoordinate -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#cylindricalRadialCoordinate">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#radialCoordinate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#cylindricalRadius -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#cylindricalRadius">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#length"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#radius"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#diagonal -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#diagonal">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#lineSegment"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LineSegment that joins two non-consecutive vertices in a Polygo
+</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#diameter -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#diameter">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#chord"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chord going through the center of the circle or sphere</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#dilation -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#dilation">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#transformation"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shrinks Shape toward a center point.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#direction -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#direction">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricEntity"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A (usually, unit) vector in a given direction, defined as the direction along
+the line from fromPoint to toPoint.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#directrix -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#directrix">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#line"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A parabola is the set of points equidistant from the focus and the directrix line.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#eccentricity -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#eccentricity">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#edge -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#edge">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#side"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LineSegment at the intersection of two faces of a Polyhedron.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#ellipse -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#ellipse">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#closedCurve"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#conicSection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#endPoint -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#endPoint">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#point"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#equilateralTriangle -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#equilateralTriangle">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#triangle"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Triangle with 3 equal side
+</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#face -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#face">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#region"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polygon bounding a polyhedron</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#focusPoint -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#focusPoint">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#point"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ParabolaFocus: Parabola is set of points equidistant from focus and directric
+Ellipse: Ellipse is set of points equidistant from two foci
+Hyperbola: Hyperbola is set of points whose difference in distance from two foci is a constant.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#fractal -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#fractal">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricCenter -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricCenter">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#center"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Center found by weighing all points in the shape equally.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricEntity -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricEntity">
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anything in Geometry</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricalObject -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricalObject">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#mathematicalConcept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#greatCircle -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#greatCircle">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#circle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#harmonograph -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#harmonograph">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#curveOnPlane"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Path of double pendulum at a right angle
+Curves generated by the parametric equations
+x(t) = A(t)cos(wx*t - deltax
+y(t) = B(t)sin(wy*t - deltay
+Where A and B decay exponentially with time.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#height -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#height">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#length"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hexagon -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hexagon">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#convexPolygon"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6 sided Polygo
+</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hyperbola -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hyperbola">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#conicSection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hyperboloid -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hyperboloid">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#three-D_Shape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#intercept -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#intercept">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#shape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#intersection -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#intersection">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#region"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Set of points that two Regions or Shapes have in common.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#isometric -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#isometric">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#axonometricProjection"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projection plane intersects the three coordinate axes at the same distance from the origin.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#isoscelesTriangle -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#isoscelesTriangle">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#triangle"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Triangle with 2 equal side
+</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#latitudeAngle -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#latitudeAngle">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angularCoordinate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#length -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#length">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#line -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#line">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#one-D_Shape"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An infinite continuous straight collection of point
+</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#lineSegment -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#lineSegment">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#one-D_Shape"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#definedBy"/>
+                <owl:allValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#endPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#definedBy"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LineSegment is defined by its two endpoint
+
+</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#linearCoordinateSystem -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#linearCoordinateSystem">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinateSystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCoordinate"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#localCoordinate -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#localCoordinate">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#localCoordinateSystem -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#localCoordinateSystem">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinateSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#localCoordinates -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#localCoordinates">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinates"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#longitudeAngle -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#longitudeAngle">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angularCoordinate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#multiviewProjection -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#multiviewProjection">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#orthographicProjection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#oblateSpheroid -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#oblateSpheroid">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#spheroid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#obliqueProjection -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#obliqueProjection">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#parallelProjection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#obtuseAnge -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#obtuseAnge">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angle"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angle greater than 90 degree
+</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#octagon -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#octagon">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#convexPolygon"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8 sided polygon</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#octahedron -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#octahedron">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#polyhedron"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polyhedron with 8 faces.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#one-D_Shape -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#one-D_Shape">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#shape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#origin -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#origin">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#point"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Origin of CoordinateSystem</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#originOfLongitude -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#originOfLongitude">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#orthographicProjection -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#orthographicProjection">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#parallelProjection"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projection lines are perpendicular to the projection plane.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#parabaloid -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#parabaloid">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#three-D_Shape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#parabola -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#parabola">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#conicSection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#parallelProjection -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#parallelProjection">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#projection"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projection lines parallel</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#parallelogram -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#parallelogram">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#quadralateral"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quadralateral with 2 pairs of parallel sides</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#pentagon -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#pentagon">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#convexPolygon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#perimeter -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#perimeter">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#length"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#perspectiveProjection -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#perspectiveProjection">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#projection"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projection lines not parallel</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#planarProjection -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#planarProjection">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#projection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#plane -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#plane">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#two-D_Shape"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2-d shape that extends without end in two directions.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#point -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#point">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#position"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#region"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#shape"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#embeds"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#polarAngle -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#polarAngle">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angularCoordinate"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angle measured from a Polar Direction (usually the z-axis).</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#polarAxis -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#polarAxis">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#direction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#polarCoordinateSystem -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#polarCoordinateSystem">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinateSystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCoordinate"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#azimuthalAngle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCoordinate"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#radialCoordinate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCoordinate"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#polarRadialCoordinate -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#polarRadialCoordinate">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#radialCoordinate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#pole -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#pole">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#point"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One of 2 points on a sphere where the normal intersects the equator at a right angle.  Also, the direction in spherical coordinates where the theta is + or - 90 degrees and phi is undefined. 
+		</skos-core:definition>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pole</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#polygon -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#polygon">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#two-D_Shape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#polyhedron -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#polyhedron">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#three-D_Shape"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A 3-D shape of polygons called faces enclosing a solid region.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#prism -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#prism">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#polyhedron"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polyhedron with two Congruent faces and with the other faces Parallelograms.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#projection -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#projection">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#shape"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A ProjectorShape is projected geometrically onto a Projection Shape.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#projectionOnto3D_Shape -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#projectionOnto3D_Shape">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#projection"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#three-D_Shape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#prolateSpheroid -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#prolateSpheroid">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#spheroid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#pyramid -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#pyramid">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#polyhedron"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polyhedron in which the base is a polygon and the lateral faces are triangles with a common vertex.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#quadralateral -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#quadralateral">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#convexPolygon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#radialCoordinate -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#radialCoordinate">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#radius -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#radius">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#length"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radius</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#ray -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#ray">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#one-D_Shape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#rectangle -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#rectangle">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#parallelogram"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parallelogram with interior angles being right angles.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#rectangularPrism -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#rectangularPrism">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#prism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#reflection -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#reflection">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#transformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#region -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#region">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#rhombus -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#rhombus">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#parallelogram"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Parallelogram with 4 congruent sides.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#rightAngle -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#rightAngle">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angle"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angle of 90 degrees</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#rightTriangle -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#rightTriangle">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#triangle"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Triangle with a RightAngle</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#rotation -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#rotation">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#transformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#semimajorAxis -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#semimajorAxis">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#length"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#semimajorRadius -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#semimajorRadius">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#length"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#semiminorAxis -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#semiminorAxis">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#length"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#semiminorRadius -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#semiminorRadius">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#length"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#shape -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#shape">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#side -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#side">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#lineSegment"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LineSegment of a Polygon
+</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#solidAngle -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#solidAngle">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/IVOAO.owl#measurement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#space -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#space">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricEntity"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A set of orthogonal dimensions</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#sphere -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#sphere">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#spheroid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#sphericalCoordinateSystem -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#sphericalCoordinateSystem">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinateSystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCoordinate"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#azimuthalAngle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCoordinate"/>
+                <owl:someValuesFrom rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#radialCoordinate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCoordinate"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#latitudeAngle"/>
+                            <rdf:Description rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#polarAngle"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#hasCoordinate"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#sphericalRadialCoordinate -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#sphericalRadialCoordinate">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#radialCoordinate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#spheroid -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#spheroid">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#three-D_Shape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#square -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#square">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#rectangle"/>
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#rhombus"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rectangle with all 4 sides equal</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#surfaceArea -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#surfaceArea">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricEntity"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Area of any surface
+</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#three-D_Shape -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#three-D_Shape">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#shape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#torus -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#torus">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#transformation -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#transformation">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#translation -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#translation">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#transformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#trapezoid -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#trapezoid">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#quadralateral"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quadrilateral with 2 parallel side
+</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#triangle -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#triangle">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#convexPolygon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#two-D_Shape -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#two-D_Shape">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#shape"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#union -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#union">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#region"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#unitVector -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#unitVector">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#vector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#vector -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#vector">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#vertex -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#vertex">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#point"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Point where two LineSeqments meet.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#vertexOfParabola -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#vertexOfParabola">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#point"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Point on a parabola with normal that passes through the focus.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#volume -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#volume">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#geometricEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#width -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#width">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#length"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#x -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#x">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#alongAxis"/>
+                <owl:hasValue rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/xAxis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Value along X-axis</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#xCoordinate -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#xCoordinate">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#CartesianCoordinate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#y -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#y">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#alongAxis"/>
+                <owl:hasValue rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/yAxis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Value along Y-axis</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#yCoordinate -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#yCoordinate">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#CartesianCoordinate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#z -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#z">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#coordinate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#alongAxis"/>
+                <owl:hasValue rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/zAxis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Value along Z-axis</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#zCoordinate -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#zCoordinate">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#CartesianCoordinate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#zenithAngle -->
+
+    <owl:Class rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#zenithAngle">
+        <rdfs:subClassOf rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#angularCoordinate"/>
+        <skos-core:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minimum gngle from the tangent plane to a sphere to a point off the sphere.  In astronomy the angle from the celestial object to the horizon.</skos-core:definition>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/xAxis -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/xAxis">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#axis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/yAxis -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/yAxis">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#axis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/zAxis -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/zAxis">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#axis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#xAxis -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#xAxis">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#axis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#yAxis -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#yAxis">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#axis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#zAxis -->
+
+    <owl:NamedIndividual rdf:about="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#zAxis">
+        <rdf:type rdf:resource="http://www.astro.umd.edu/~eshaya/astro-onto/owl/geometry.owl#axis"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
