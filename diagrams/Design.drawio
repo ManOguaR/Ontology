@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-09-30T13:34:47.769Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.53" etag="sE3dJ9f2w1a_yj1puRhN" version="20.3.7" type="github">
+<mxfile host="app.diagrams.net" modified="2022-09-30T13:35:49.561Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.53" etag="PJ3_OWTRQszUsS_g5Zuq" version="20.3.7" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
     <mxGraphModel dx="1422" dy="833" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -731,6 +731,15 @@
         <mxCell id="jQ5rBCjS09NbZl5NUNOA-116" value="&lt;div style=&quot;text-align: justify;&quot;&gt;Epilogues can appear as additional act, to add flavour, color and involvement in the global campaing.&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=10;" vertex="1" parent="1">
           <mxGeometry x="1670" y="1830" width="320" height="40" as="geometry" />
         </mxCell>
+        <mxCell id="jQ5rBCjS09NbZl5NUNOA-123" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;exitX=0.467;exitY=0.975;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.25;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="jQ5rBCjS09NbZl5NUNOA-117" target="jQ5rBCjS09NbZl5NUNOA-121">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="864" y="1790" />
+              <mxPoint x="830" y="1790" />
+              <mxPoint x="830" y="1850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
         <mxCell id="jQ5rBCjS09NbZl5NUNOA-117" value="" style="shape=xor;whiteSpace=wrap;html=1;shadow=0;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
           <mxGeometry x="850" y="1720" width="30" height="40" as="geometry" />
         </mxCell>
@@ -745,6 +754,12 @@
             <mxPoint x="1120" y="1910" as="sourcePoint" />
             <mxPoint x="800" y="1670" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="jQ5rBCjS09NbZl5NUNOA-122" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" edge="1" parent="1" source="jQ5rBCjS09NbZl5NUNOA-121" target="jQ5rBCjS09NbZl5NUNOA-91">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jQ5rBCjS09NbZl5NUNOA-121" value="" style="shape=xor;whiteSpace=wrap;html=1;shadow=0;fontSize=12;fillColor=#b0e3e6;strokeColor=#0e8088;" vertex="1" parent="1">
+          <mxGeometry x="850" y="1830" width="30" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
