@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-03T17:30:49.023Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.53" etag="DpcPtV6emNtGwMt53usZ" version="20.4.0" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-10-03T17:32:34.484Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.53" etag="gpMxRgddhPgSVX_2XbA5" version="20.4.0" type="github" pages="2">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="HOME">
     <mxGraphModel dx="1422" dy="833" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -890,23 +890,26 @@
         <mxCell id="fGmCdMmqN-YFwAhNMdZ2-112" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;b&gt;Resolution of any event.&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify; font-size: 12px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify; font-size: 12px;&quot;&gt;Game Rules are oriented to solve any situation possible during game, but the narrative nature of RPGs means a challenge to keep any ruleset brief and simple. Many rulesets have rules to solve actions by using any statistic or skill from characters involved, applying many modifiers as situation requires, roll some dice, getting a result that updates both the current scene and plot.&lt;/div&gt;&lt;div style=&quot;text-align: justify; font-size: 12px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify; font-size: 12px;&quot;&gt;Over that basic concept, game authors have been developed detailed results, that can affect duration, mishap an item, or even suffer an accident. All of them were intended to create diversity and narrative variance during RPG game sessions.&amp;nbsp;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=0;glass=0;sketch=1;fontSize=14;opacity=50;" vertex="1" parent="fGmCdMmqN-YFwAhNMdZ2-113">
           <mxGeometry x="18.5" y="318.5" width="470" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="FysmRX5xXf5rJXzc9xDH-1" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.8_point_star;shadow=1;fontSize=12;rotation=15;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;sketch=1;" vertex="1" parent="1">
-          <mxGeometry x="610" y="1062.5" width="350" height="327.5" as="geometry" />
+        <mxCell id="FysmRX5xXf5rJXzc9xDH-7" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="558.5813617638753" y="1022.7863130522239" width="422.8372764722494" height="446.1021262002125" as="geometry" />
         </mxCell>
-        <mxCell id="FysmRX5xXf5rJXzc9xDH-2" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.flash;shadow=1;fontSize=12;rotation=15;fillColor=#f8cecc;strokeColor=#b85450;sketch=1;" vertex="1" parent="1">
-          <mxGeometry x="831.8199999999999" y="1120.6799999999998" width="98.18" height="298.64" as="geometry" />
+        <mxCell id="FysmRX5xXf5rJXzc9xDH-1" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.8_point_star;shadow=1;fontSize=12;rotation=15;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;sketch=1;" vertex="1" parent="FysmRX5xXf5rJXzc9xDH-7">
+          <mxGeometry x="36.41863823612471" y="39.71368694777607" width="350" height="327.5" as="geometry" />
         </mxCell>
-        <mxCell id="FysmRX5xXf5rJXzc9xDH-3" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;b&gt;Action, Combat and Damage.&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=0;glass=0;sketch=1;fontSize=14;opacity=50;rotation=-10;" vertex="1" parent="1">
-          <mxGeometry x="675.61" y="1139.25" width="200" height="30" as="geometry" />
+        <mxCell id="FysmRX5xXf5rJXzc9xDH-2" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.flash;shadow=1;fontSize=12;rotation=15;fillColor=#f8cecc;strokeColor=#b85450;sketch=0;" vertex="1" parent="FysmRX5xXf5rJXzc9xDH-7">
+          <mxGeometry x="258.23863823612464" y="97.8936869477759" width="98.18" height="298.64" as="geometry" />
         </mxCell>
-        <mxCell id="FysmRX5xXf5rJXzc9xDH-4" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;RPGs usually have an entire chapter dedicated to resolve the complexities of a combat situation. It extends action rules by adding specific rules to solve attacks, defenses, and damage.&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=1;sketch=1;fontSize=12;rotation=-10;" vertex="1" parent="1">
-          <mxGeometry x="700" y="1169.25" width="151.21" height="119.83" as="geometry" />
+        <mxCell id="FysmRX5xXf5rJXzc9xDH-3" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;b&gt;Action, Combat and Damage.&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=0;glass=0;sketch=1;fontSize=14;opacity=50;rotation=-10;" vertex="1" parent="FysmRX5xXf5rJXzc9xDH-7">
+          <mxGeometry x="102.02863823612472" y="116.46368694777607" width="200" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="FysmRX5xXf5rJXzc9xDH-5" value="" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;shadow=1;sketch=1;fontSize=12;rotation=-165;position2=0.5;size=40;position=0.51;" vertex="1" parent="1">
-          <mxGeometry x="675.61" y="1310" width="164.39" height="140" as="geometry" />
+        <mxCell id="FysmRX5xXf5rJXzc9xDH-4" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;RPGs usually have an entire chapter dedicated to resolve the complexities of a combat situation. It extends action rules by adding specific rules to solve attacks, defenses, and damage.&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=1;sketch=1;fontSize=12;rotation=-10;" vertex="1" parent="FysmRX5xXf5rJXzc9xDH-7">
+          <mxGeometry x="126.4186382361247" y="146.46368694777607" width="151.21" height="119.83" as="geometry" />
         </mxCell>
-        <mxCell id="FysmRX5xXf5rJXzc9xDH-6" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 10px;&quot;&gt;Magic, Starship Combat, and other scenes, including fantasy extends&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font size=&quot;1&quot;&gt;&amp;nbsp;action rules by adding entire chapters covering these specific situations.&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=1;sketch=1;fontSize=12;rotation=15;" vertex="1" parent="1">
-          <mxGeometry x="680.91" y="1359" width="141.8" height="79.25" as="geometry" />
+        <mxCell id="FysmRX5xXf5rJXzc9xDH-5" value="" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;shadow=1;sketch=1;fontSize=12;rotation=-165;position2=0.5;size=40;position=0.51;opacity=80;" vertex="1" parent="FysmRX5xXf5rJXzc9xDH-7">
+          <mxGeometry x="102.02863823612472" y="287.21368694777607" width="164.39" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="FysmRX5xXf5rJXzc9xDH-6" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 10px;&quot;&gt;Magic, Starship Combat, and other scenes, including fantasy extends&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font size=&quot;1&quot;&gt;&amp;nbsp;action rules by adding entire chapters covering these specific situations.&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=1;sketch=1;fontSize=12;rotation=15;" vertex="1" parent="FysmRX5xXf5rJXzc9xDH-7">
+          <mxGeometry x="107.32863823612468" y="336.21368694777607" width="141.8" height="79.25" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
