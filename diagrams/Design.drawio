@@ -1,9 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2022-10-04T18:06:51.013Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 Edg/105.0.1343.53" etag="LT7bZa5yhTXoQxoyrbnX" version="20.4.0" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-10-05T15:08:34.500Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.34" etag="YCCUaCkVnPnRoH_y8gN8" version="20.4.0" type="github" pages="2">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="HOME">
-    <mxGraphModel dx="813" dy="476" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="1422" dy="833" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="lYMgvqxPvYprWY4Z2UTk-14" value="" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;size=0.1325515445095068;" vertex="1" parent="1">
+          <mxGeometry x="687.71" y="1320" width="532.29" height="322.79" as="geometry" />
+        </mxCell>
         <mxCell id="fGmCdMmqN-YFwAhNMdZ2-77" value="" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;glass=0;sketch=0;fontSize=12;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;arcSize=11;" parent="1" vertex="1">
           <mxGeometry x="970" y="1050" width="710" height="230" as="geometry" />
         </mxCell>
@@ -887,113 +890,185 @@
         <mxCell id="fGmCdMmqN-YFwAhNMdZ2-110" value="Plot" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;fontSize=12;fillColor=#FFFFCC;fontColor=#000000;gradientColor=#FFFF66;" parent="fGmCdMmqN-YFwAhNMdZ2-113" vertex="1">
           <mxGeometry x="428.5" y="223.5" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="fGmCdMmqN-YFwAhNMdZ2-112" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;b&gt;Resolution of any event.&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify; font-size: 12px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify; font-size: 12px;&quot;&gt;Game Rules are oriented to solve any situation possible during game, but the narrative nature of RPGs means a challenge to keep any ruleset brief and simple. Many rulesets have rules to solve actions by using any statistic or skill from characters involved, applying many modifiers as situation requires, roll some dice, getting a result that updates both the current scene and plot.&lt;/div&gt;&lt;div style=&quot;text-align: justify; font-size: 12px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify; font-size: 12px;&quot;&gt;Over that basic concept, game authors have been developed detailed results, that can affect duration, mishap an item, or even suffer an accident. All of them were intended to create diversity and narrative variance during RPG game sessions.&amp;nbsp;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=0;glass=0;sketch=1;fontSize=14;opacity=50;" parent="fGmCdMmqN-YFwAhNMdZ2-113" vertex="1">
+        <mxCell id="fGmCdMmqN-YFwAhNMdZ2-112" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;b&gt;Resolution of any event.&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify; font-size: 12px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify; font-size: 12px;&quot;&gt;Game Rules are oriented to solve any possible situation during game, also the narrative nature of RPGs means a challenge to keep any ruleset brief and simple. Many rulesets have rules to solve actions by using any statistic or skill from characters involved, applying many modifiers as situation requires, roll some dice, getting a result that updates both the current scene and plot.&lt;/div&gt;&lt;div style=&quot;text-align: justify; font-size: 12px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify; font-size: 12px;&quot;&gt;Over that basic concept, game authors have been developed detailed results, that can affect duration, mishap an item, or even suffer an accident. All of them were intended to create diversity and narrative variance during RPG game sessions.&amp;nbsp;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=0;glass=0;sketch=1;fontSize=14;opacity=50;" parent="fGmCdMmqN-YFwAhNMdZ2-113" vertex="1">
           <mxGeometry x="18.5" y="318.5" width="470" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="FysmRX5xXf5rJXzc9xDH-7" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="558.5813617638753" y="1022.7863130522239" width="422.8372764722494" height="446.1021262002125" as="geometry" />
-        </mxCell>
-        <mxCell id="FysmRX5xXf5rJXzc9xDH-2" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.flash;shadow=1;fontSize=12;rotation=15;fillColor=#f8cecc;strokeColor=#b85450;sketch=0;" parent="FysmRX5xXf5rJXzc9xDH-7" vertex="1">
-          <mxGeometry x="258.23863823612464" y="97.8936869477759" width="98.18" height="298.64" as="geometry" />
-        </mxCell>
-        <mxCell id="F2Pp1eZwonb7qbdjqKvu-1" value="" style="group" parent="FysmRX5xXf5rJXzc9xDH-7" vertex="1" connectable="0">
-          <mxGeometry width="422.8372764722494" height="446.1021262002125" as="geometry" />
-        </mxCell>
-        <mxCell id="FysmRX5xXf5rJXzc9xDH-1" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.8_point_star;shadow=1;fontSize=12;rotation=15;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;sketch=1;" parent="F2Pp1eZwonb7qbdjqKvu-1" vertex="1">
-          <mxGeometry x="36.41863823612471" y="39.71368694777607" width="350" height="327.5" as="geometry" />
-        </mxCell>
-        <mxCell id="FysmRX5xXf5rJXzc9xDH-5" value="" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;shadow=1;sketch=1;fontSize=12;rotation=-165;position2=0.5;size=40;position=0.51;opacity=80;" parent="F2Pp1eZwonb7qbdjqKvu-1" vertex="1">
-          <mxGeometry x="102.02863823612472" y="287.21368694777607" width="164.39" height="140" as="geometry" />
-        </mxCell>
-        <mxCell id="FysmRX5xXf5rJXzc9xDH-3" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;b&gt;Action, Combat and Damage.&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=0;glass=0;sketch=1;fontSize=14;opacity=50;rotation=-10;" parent="F2Pp1eZwonb7qbdjqKvu-1" vertex="1">
-          <mxGeometry x="102.02863823612472" y="116.46368694777607" width="200" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="FysmRX5xXf5rJXzc9xDH-4" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;RPGs usually have an entire chapter dedicated to resolve the complexities of a combat situation. It extends action rules by adding specific rules to solve attacks, defenses, and damage.&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=1;sketch=1;fontSize=12;rotation=-10;" parent="F2Pp1eZwonb7qbdjqKvu-1" vertex="1">
-          <mxGeometry x="126.4186382361247" y="146.46368694777607" width="151.21" height="119.83" as="geometry" />
-        </mxCell>
-        <mxCell id="FysmRX5xXf5rJXzc9xDH-6" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 10px;&quot;&gt;Magic, Starship Combat, and other fantasy&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font size=&quot;1&quot;&gt;&amp;nbsp;action scenes, brings entire chapters covering these specific situations to the Game Rules.&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=1;sketch=1;fontSize=12;rotation=15;" parent="F2Pp1eZwonb7qbdjqKvu-1" vertex="1">
-          <mxGeometry x="107.32863823612468" y="336.21368694777607" width="141.8" height="79.25" as="geometry" />
-        </mxCell>
-        <mxCell id="cSSF9zHdFe2rOzuGBV9s-29" value="" style="group" vertex="1" connectable="0" parent="1">
+        <mxCell id="cSSF9zHdFe2rOzuGBV9s-29" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="10" y="1600" width="520" height="290" as="geometry" />
         </mxCell>
-        <mxCell id="cSSF9zHdFe2rOzuGBV9s-21" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;" vertex="1" parent="cSSF9zHdFe2rOzuGBV9s-29">
+        <mxCell id="cSSF9zHdFe2rOzuGBV9s-21" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;" parent="cSSF9zHdFe2rOzuGBV9s-29" vertex="1">
           <mxGeometry x="29" y="20" width="491" height="260" as="geometry" />
         </mxCell>
-        <mxCell id="cSSF9zHdFe2rOzuGBV9s-16" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="cSSF9zHdFe2rOzuGBV9s-29">
+        <mxCell id="cSSF9zHdFe2rOzuGBV9s-16" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="cSSF9zHdFe2rOzuGBV9s-29" vertex="1">
           <mxGeometry x="385" y="225" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="cSSF9zHdFe2rOzuGBV9s-15" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="cSSF9zHdFe2rOzuGBV9s-29">
+        <mxCell id="cSSF9zHdFe2rOzuGBV9s-15" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="cSSF9zHdFe2rOzuGBV9s-29" vertex="1">
           <mxGeometry x="380" y="220" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="cSSF9zHdFe2rOzuGBV9s-14" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="cSSF9zHdFe2rOzuGBV9s-29">
+        <mxCell id="cSSF9zHdFe2rOzuGBV9s-14" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="cSSF9zHdFe2rOzuGBV9s-29" vertex="1">
           <mxGeometry x="375" y="215" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="cSSF9zHdFe2rOzuGBV9s-5" value="Movement" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="cSSF9zHdFe2rOzuGBV9s-29">
+        <mxCell id="cSSF9zHdFe2rOzuGBV9s-5" value="Movement" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="cSSF9zHdFe2rOzuGBV9s-29" vertex="1">
           <mxGeometry x="170" y="140" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="cSSF9zHdFe2rOzuGBV9s-6" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="cSSF9zHdFe2rOzuGBV9s-29">
+        <mxCell id="cSSF9zHdFe2rOzuGBV9s-6" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="cSSF9zHdFe2rOzuGBV9s-29" vertex="1">
           <mxGeometry x="61" y="130" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="cSSF9zHdFe2rOzuGBV9s-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;dashed=1;dashPattern=1 4;" edge="1" parent="cSSF9zHdFe2rOzuGBV9s-29" source="cSSF9zHdFe2rOzuGBV9s-6" target="cSSF9zHdFe2rOzuGBV9s-5">
+        <mxCell id="cSSF9zHdFe2rOzuGBV9s-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;dashed=1;dashPattern=1 4;" parent="cSSF9zHdFe2rOzuGBV9s-29" source="cSSF9zHdFe2rOzuGBV9s-6" target="cSSF9zHdFe2rOzuGBV9s-5" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="190" y="410" as="sourcePoint" />
             <mxPoint x="240" y="360" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cSSF9zHdFe2rOzuGBV9s-9" value="Walking" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="cSSF9zHdFe2rOzuGBV9s-29">
+        <mxCell id="cSSF9zHdFe2rOzuGBV9s-9" value="Walking" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="cSSF9zHdFe2rOzuGBV9s-29" vertex="1">
           <mxGeometry x="370" y="60" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="cSSF9zHdFe2rOzuGBV9s-10" value="Climbing" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="cSSF9zHdFe2rOzuGBV9s-29">
+        <mxCell id="cSSF9zHdFe2rOzuGBV9s-10" value="Climbing" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="cSSF9zHdFe2rOzuGBV9s-29" vertex="1">
           <mxGeometry x="370" y="110" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="cSSF9zHdFe2rOzuGBV9s-11" value="Stealth" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="cSSF9zHdFe2rOzuGBV9s-29">
+        <mxCell id="cSSF9zHdFe2rOzuGBV9s-11" value="Stealth" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="cSSF9zHdFe2rOzuGBV9s-29" vertex="1">
           <mxGeometry x="370" y="160" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="cSSF9zHdFe2rOzuGBV9s-12" value="Others" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="cSSF9zHdFe2rOzuGBV9s-29">
+        <mxCell id="cSSF9zHdFe2rOzuGBV9s-12" value="Others" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="cSSF9zHdFe2rOzuGBV9s-29" vertex="1">
           <mxGeometry x="370" y="210" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="cSSF9zHdFe2rOzuGBV9s-17" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;dashed=1;dashPattern=1 4;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="cSSF9zHdFe2rOzuGBV9s-29" source="cSSF9zHdFe2rOzuGBV9s-5" target="cSSF9zHdFe2rOzuGBV9s-11">
+        <mxCell id="cSSF9zHdFe2rOzuGBV9s-17" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;dashed=1;dashPattern=1 4;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="cSSF9zHdFe2rOzuGBV9s-29" source="cSSF9zHdFe2rOzuGBV9s-5" target="cSSF9zHdFe2rOzuGBV9s-11" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="190" y="360" as="sourcePoint" />
             <mxPoint x="240" y="310" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cSSF9zHdFe2rOzuGBV9s-18" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;dashed=1;dashPattern=1 4;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="cSSF9zHdFe2rOzuGBV9s-29" source="cSSF9zHdFe2rOzuGBV9s-5" target="cSSF9zHdFe2rOzuGBV9s-10">
+        <mxCell id="cSSF9zHdFe2rOzuGBV9s-18" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;dashed=1;dashPattern=1 4;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="cSSF9zHdFe2rOzuGBV9s-29" source="cSSF9zHdFe2rOzuGBV9s-5" target="cSSF9zHdFe2rOzuGBV9s-10" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="300" y="170" as="sourcePoint" />
             <mxPoint x="380" y="190" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cSSF9zHdFe2rOzuGBV9s-20" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;dashed=1;dashPattern=1 4;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="cSSF9zHdFe2rOzuGBV9s-29" source="cSSF9zHdFe2rOzuGBV9s-5" target="cSSF9zHdFe2rOzuGBV9s-12">
+        <mxCell id="cSSF9zHdFe2rOzuGBV9s-20" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;dashed=1;dashPattern=1 4;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="cSSF9zHdFe2rOzuGBV9s-29" source="cSSF9zHdFe2rOzuGBV9s-5" target="cSSF9zHdFe2rOzuGBV9s-12" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="300" y="170" as="sourcePoint" />
             <mxPoint x="380" y="90" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cSSF9zHdFe2rOzuGBV9s-25" value="" style="group" vertex="1" connectable="0" parent="cSSF9zHdFe2rOzuGBV9s-29">
+        <mxCell id="cSSF9zHdFe2rOzuGBV9s-25" value="" style="group" parent="cSSF9zHdFe2rOzuGBV9s-29" vertex="1" connectable="0">
           <mxGeometry width="352" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="cSSF9zHdFe2rOzuGBV9s-23" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=24;" vertex="1" parent="cSSF9zHdFe2rOzuGBV9s-25">
+        <mxCell id="cSSF9zHdFe2rOzuGBV9s-23" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=24;" parent="cSSF9zHdFe2rOzuGBV9s-25" vertex="1">
           <mxGeometry width="352" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="cSSF9zHdFe2rOzuGBV9s-22" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Every simple action is covered by game rules, in addition, many rules can take an action as trigger event.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;An actor moving around a scene can be either walking or running, climbing or stealthy hiding in shadows. Actor moves using a direction and speed vector, as result of every other rules applied to movement.&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;spacingLeft=4;" vertex="1" parent="cSSF9zHdFe2rOzuGBV9s-25">
+        <mxCell id="cSSF9zHdFe2rOzuGBV9s-22" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Every simple action is covered by game rules, in addition, many rules can take an action as trigger event.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;An actor moving around a scene can be either walking or running, climbing or stealthy hiding in shadows. Actor moves using a direction and speed vector, as result of every other rules applied to movement.&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;spacingLeft=4;" parent="cSSF9zHdFe2rOzuGBV9s-25" vertex="1">
           <mxGeometry x="2" width="320" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="cSSF9zHdFe2rOzuGBV9s-19" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;dashed=1;dashPattern=1 4;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="cSSF9zHdFe2rOzuGBV9s-29" source="cSSF9zHdFe2rOzuGBV9s-5" target="cSSF9zHdFe2rOzuGBV9s-9">
+        <mxCell id="cSSF9zHdFe2rOzuGBV9s-19" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;dashed=1;dashPattern=1 4;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="cSSF9zHdFe2rOzuGBV9s-29" source="cSSF9zHdFe2rOzuGBV9s-5" target="cSSF9zHdFe2rOzuGBV9s-9" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="300" y="170" as="sourcePoint" />
             <mxPoint x="380" y="140" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cSSF9zHdFe2rOzuGBV9s-28" value="" style="group" vertex="1" connectable="0" parent="cSSF9zHdFe2rOzuGBV9s-29">
+        <mxCell id="cSSF9zHdFe2rOzuGBV9s-28" value="" style="group" parent="cSSF9zHdFe2rOzuGBV9s-29" vertex="1" connectable="0">
           <mxGeometry y="240" width="350" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="cSSF9zHdFe2rOzuGBV9s-26" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="cSSF9zHdFe2rOzuGBV9s-28">
+        <mxCell id="cSSF9zHdFe2rOzuGBV9s-26" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="cSSF9zHdFe2rOzuGBV9s-28" vertex="1">
           <mxGeometry width="350" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="cSSF9zHdFe2rOzuGBV9s-27" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;This example extents to every event and rule that is aplicable to a scene.&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;spacingLeft=4;" vertex="1" parent="cSSF9zHdFe2rOzuGBV9s-28">
+        <mxCell id="cSSF9zHdFe2rOzuGBV9s-27" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;This example extents to every event and rule that is aplicable to a scene.&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;spacingLeft=4;" parent="cSSF9zHdFe2rOzuGBV9s-28" vertex="1">
           <mxGeometry width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lYMgvqxPvYprWY4Z2UTk-2" value="" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;shadow=0;fontSize=12;opacity=25;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="850" y="1400" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lYMgvqxPvYprWY4Z2UTk-3" value="" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;shadow=0;fontSize=12;opacity=50;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="910" y="1400" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lYMgvqxPvYprWY4Z2UTk-4" value="Combat&lt;br&gt;Round" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;shadow=0;fontSize=12;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="970" y="1400" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lYMgvqxPvYprWY4Z2UTk-5" value="" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;shadow=0;fontSize=12;opacity=50;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="1400" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lYMgvqxPvYprWY4Z2UTk-6" value="" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;shadow=0;fontSize=12;opacity=25;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="1400" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lYMgvqxPvYprWY4Z2UTk-7" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="930" y="1468.89" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lYMgvqxPvYprWY4Z2UTk-8" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;dashed=1;dashPattern=1 4;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="lYMgvqxPvYprWY4Z2UTk-7" target="lYMgvqxPvYprWY4Z2UTk-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1049" y="148.89" as="sourcePoint" />
+            <mxPoint x="1039" y="1498.89" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="998" y="1499" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lYMgvqxPvYprWY4Z2UTk-9" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="970" y="1518.89" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lYMgvqxPvYprWY4Z2UTk-10" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;dashed=1;dashPattern=1 4;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" source="lYMgvqxPvYprWY4Z2UTk-9" parent="1" target="lYMgvqxPvYprWY4Z2UTk-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1089" y="198.89" as="sourcePoint" />
+            <mxPoint x="1037.5" y="1500" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1025" y="1549" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lYMgvqxPvYprWY4Z2UTk-11" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="1490" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lYMgvqxPvYprWY4Z2UTk-12" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;dashed=1;dashPattern=1 4;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="lYMgvqxPvYprWY4Z2UTk-11" target="lYMgvqxPvYprWY4Z2UTk-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1199" y="170" as="sourcePoint" />
+            <mxPoint x="1189" y="1520" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1053" y="1520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lYMgvqxPvYprWY4Z2UTk-13" value="Actions" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="995" y="1460" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="lYMgvqxPvYprWY4Z2UTk-19" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Combat, and action scenes, usually presents the problem that many actors are trying to affect others by interacting, and many others just act by themselves.&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="870" y="1340" width="330" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lYMgvqxPvYprWY4Z2UTk-1" value="" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;shadow=0;fontSize=12;opacity=10;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="790" y="1400" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lYMgvqxPvYprWY4Z2UTk-18" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="558.5813617638753" y="1022.7863130522239" width="422.8372764722494" height="446.1021262002125" as="geometry" />
+        </mxCell>
+        <mxCell id="lYMgvqxPvYprWY4Z2UTk-16" value="" style="group" vertex="1" connectable="0" parent="lYMgvqxPvYprWY4Z2UTk-18">
+          <mxGeometry width="422.8372764722494" height="406.92737389555214" as="geometry" />
+        </mxCell>
+        <mxCell id="lYMgvqxPvYprWY4Z2UTk-15" value="" style="group" vertex="1" connectable="0" parent="lYMgvqxPvYprWY4Z2UTk-16">
+          <mxGeometry width="422.8372764722494" height="406.92737389555214" as="geometry" />
+        </mxCell>
+        <mxCell id="FysmRX5xXf5rJXzc9xDH-1" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.8_point_star;shadow=1;fontSize=12;rotation=15;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;sketch=1;" parent="lYMgvqxPvYprWY4Z2UTk-15" vertex="1">
+          <mxGeometry x="36.41863823612471" y="39.71368694777607" width="350" height="327.5" as="geometry" />
+        </mxCell>
+        <mxCell id="FysmRX5xXf5rJXzc9xDH-2" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.flash;shadow=1;fontSize=12;rotation=15;fillColor=#f8cecc;strokeColor=#b85450;sketch=0;" parent="lYMgvqxPvYprWY4Z2UTk-15" vertex="1">
+          <mxGeometry x="258.23863823612464" y="97.8936869477759" width="98.18" height="298.64" as="geometry" />
+        </mxCell>
+        <mxCell id="FysmRX5xXf5rJXzc9xDH-3" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;b&gt;Action, Combat and Damage.&lt;/b&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=0;glass=0;sketch=1;fontSize=14;opacity=50;rotation=-10;" parent="lYMgvqxPvYprWY4Z2UTk-16" vertex="1">
+          <mxGeometry x="102.02863823612472" y="116.46368694777607" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="FysmRX5xXf5rJXzc9xDH-4" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;RPGs usually have an entire chapter dedicated to resolve the complexities of a combat situation. It extends action rules by adding specific rules to solve attacks, defenses, and damage.&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=1;sketch=1;fontSize=12;rotation=-10;" parent="lYMgvqxPvYprWY4Z2UTk-16" vertex="1">
+          <mxGeometry x="126.4186382361247" y="146.46368694777607" width="151.21" height="119.83" as="geometry" />
+        </mxCell>
+        <mxCell id="lYMgvqxPvYprWY4Z2UTk-17" value="" style="group" vertex="1" connectable="0" parent="lYMgvqxPvYprWY4Z2UTk-18">
+          <mxGeometry x="86.71203178711835" y="268.3252476953396" width="195.02321289801284" height="177.7768785048729" as="geometry" />
+        </mxCell>
+        <mxCell id="FysmRX5xXf5rJXzc9xDH-5" value="" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;shadow=1;sketch=1;fontSize=12;rotation=-165;position2=0.5;size=40;position=0.51;opacity=80;" parent="lYMgvqxPvYprWY4Z2UTk-17" vertex="1">
+          <mxGeometry x="15.316606449006372" y="18.888439252436456" width="164.39" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="FysmRX5xXf5rJXzc9xDH-6" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 10px;&quot;&gt;Magic, Starship Combat, and other fantasy&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font size=&quot;1&quot;&gt;&amp;nbsp;action scenes, brings entire chapters covering these specific situations to the Game Rules.&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;shadow=1;sketch=1;fontSize=12;rotation=15;" parent="lYMgvqxPvYprWY4Z2UTk-17" vertex="1">
+          <mxGeometry x="20.616606449006326" y="67.88843925243646" width="141.8" height="79.25" as="geometry" />
+        </mxCell>
+        <mxCell id="lYMgvqxPvYprWY4Z2UTk-20" value="" style="shape=step;perimeter=stepPerimeter;whiteSpace=wrap;html=1;fixedSize=1;shadow=0;fontSize=12;opacity=10;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="1400" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="lYMgvqxPvYprWY4Z2UTk-21" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Game Rules draw order over the chaos by sorting action solving in short slices of time.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;Some sort of &lt;i&gt;Initiative&lt;/i&gt;&amp;nbsp;value is used, rolled and/or modified, for every actor involved.&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;Actions are then ordered in time, and solved in order until the end of the current time slice or &lt;i&gt;Combat Round&lt;/i&gt;&amp;nbsp;in many cases.&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="700" y="1470" width="220" height="150" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
