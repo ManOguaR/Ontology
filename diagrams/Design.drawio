@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-06T18:39:15.457Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.34" etag="-9_HA0tFEr1Dhni6Jwd7" version="20.4.0" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-10-06T18:56:24.350Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.34" etag="wgRn3GK5mdwXygRWS-e9" version="20.4.0" type="github" pages="2">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="RPGs">
     <mxGraphModel dx="1422" dy="833" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -1580,7 +1580,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="aZeJ64H2RvUgvtfKQMhj-44" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="1760" y="700" width="720" height="231" as="geometry" />
+          <mxGeometry x="1765" y="1300" width="720" height="231" as="geometry" />
         </mxCell>
         <mxCell id="aZeJ64H2RvUgvtfKQMhj-42" value="" style="group" vertex="1" connectable="0" parent="aZeJ64H2RvUgvtfKQMhj-44">
           <mxGeometry x="70" y="51" width="580" height="180" as="geometry" />
@@ -1616,7 +1616,7 @@
           <mxGeometry x="500" width="120" height="61" as="geometry" />
         </mxCell>
         <mxCell id="aZeJ64H2RvUgvtfKQMhj-52" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="1700" y="920" width="792.5100000000002" height="270.92999999999984" as="geometry" />
+          <mxGeometry x="1720" y="680" width="792.5100000000002" height="270.92999999999984" as="geometry" />
         </mxCell>
         <mxCell id="aZeJ64H2RvUgvtfKQMhj-47" value="" style="group" vertex="1" connectable="0" parent="aZeJ64H2RvUgvtfKQMhj-52">
           <mxGeometry width="540" height="267" as="geometry" />
@@ -1697,7 +1697,7 @@
           <mxGeometry x="34.98999999999978" y="1.25" width="250" height="240" as="geometry" />
         </mxCell>
         <mxCell id="aZeJ64H2RvUgvtfKQMhj-79" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="1920" y="1210" width="600" height="300" as="geometry" />
+          <mxGeometry x="1920" y="980" width="600" height="300" as="geometry" />
         </mxCell>
         <mxCell id="aZeJ64H2RvUgvtfKQMhj-78" value="" style="group" vertex="1" connectable="0" parent="aZeJ64H2RvUgvtfKQMhj-79">
           <mxGeometry x="50" width="490" height="300" as="geometry" />
@@ -1761,10 +1761,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="aZeJ64H2RvUgvtfKQMhj-81" value="&lt;h1&gt;Plots and Lore&lt;/h1&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;Every Plot makes extensive use of Game Lore, Characters, places, motivations, and each other Plot&#39;s elements are part of the Game Lore, including newly created content for a specific Adventure.&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;Game Master&#39;s narrative skills are key on that, as the final referee for a logical game progress.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=1;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="1720" y="1320" width="230" height="150" as="geometry" />
+          <mxGeometry x="1720" y="1100" width="230" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="aZeJ64H2RvUgvtfKQMhj-82" value="&lt;h1&gt;Lore Ontology&lt;/h1&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;As for Game Masters and for Artificial Intelligence, a comprehensive knowledge of Game Lore is required to apply narrative to scenes.&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=1;fontSize=10;align=right;" vertex="1" parent="1">
-          <mxGeometry x="2280" y="1520" width="240" height="160" as="geometry" />
+        <mxCell id="aZeJ64H2RvUgvtfKQMhj-82" value="&lt;h1&gt;Lore Ontology&lt;/h1&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;As for Game Masters and for Artificial Intelligence, a comprehensive knowledge of Game Lore is required to apply narrative to scenes.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;A human player never has to gather a full ontology about Game Lore, because reading information on publishings is, in fact, build an ontology within data, memories and imagination.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;An AI driven GM is in need for a structured data that represents Game Lore&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=1;fontSize=10;align=right;" vertex="1" parent="1">
+          <mxGeometry x="2280" y="1531" width="240" height="180" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
