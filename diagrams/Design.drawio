@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-12T11:09:57.406Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.37" etag="OZPgemUr3x4dLGVM_5N5" version="20.4.0" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-10-12T12:07:08.993Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36 Edg/106.0.1370.37" etag="cBC5rbZwu1lGB7Id_s2R" version="20.4.0" type="github" pages="2">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="RPGs">
     <mxGraphModel dx="1422" dy="833" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
@@ -1875,10 +1875,10 @@
           <mxGeometry x="300" y="80" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="0FafnUGvR57AcQJMd3Nk-79" value="" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="2230" y="1790" width="200" height="210" as="geometry" />
+          <mxGeometry x="2210" y="1790" width="320" height="350" as="geometry" />
         </mxCell>
-        <mxCell id="0FafnUGvR57AcQJMd3Nk-74" value="&lt;h1&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Heading&lt;/font&gt;&lt;/h1&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=1;" vertex="1" parent="1">
-          <mxGeometry x="2230" y="1790" width="200" height="120" as="geometry" />
+        <mxCell id="0FafnUGvR57AcQJMd3Nk-74" value="&lt;h1&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Base Conceps&lt;/font&gt;&lt;/h1&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;There are two main pieces of knowledge that are both isolating scopes and influencing each other. These Base Conceps are:&lt;/p&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;b&gt;Game Universe,&lt;/b&gt;&amp;nbsp;contains every knowledge, as thruly facts, about &lt;i&gt;how universe works&lt;/i&gt;. It holds the general knowledge about anything in the Game. Potential subsets can be developed to support different themes, such &lt;i&gt;Magic&lt;/i&gt;, &lt;i&gt;Medieval&lt;/i&gt;&amp;nbsp;or &lt;i&gt;Science-Fiction. &lt;/i&gt;Game Universe shouldn&#39;t contain any not generic instances.&lt;/p&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;p style=&quot;text-align: justify;&quot;&gt;&lt;b&gt;Game World, &lt;/b&gt;holds every concrete, game-specific piece of knowledge and every known (named) instance. Game World is also holding any beliefs, which can be true or false, as opposite to Game Universe&#39;s facts.&lt;/p&gt;&lt;/blockquote&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Game Universe is defining the abstraction of every Game Lore concepts, while Game World is where all of them adquire a representative order.&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=7;spacingTop=-27;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=1;spacingLeft=-2;" vertex="1" parent="1">
+          <mxGeometry x="2210" y="1790" width="320" height="350" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
